@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="温曜榛 — 个人作品集与网站" />
+  <title>温曜榛 · Portfolio</title>
+
+  <!-- 字体 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      /* Colors */
+      --color-void-black: #000000;
+      --color-carbon: #060606;
+      --color-graphite: #252525;
+      --color-onyx: #1f1f1f;
+      --color-iron: #313131;
+      --color-slate: #3d3d3d;
+      --color-fog: #525252;
+      --color-ash: #7a7a7a;
+      --color-smoke: #8a8a8a;
+      --color-pearl: #c5c5c5;
+      --color-bone: #e5e5e5;
+      --color-chalk: #ffffff;
+      --color-signal-lime: #c5ff4a;
+      --color-olive-depth: #597321;
+      --color-moss-shadow: #314013;
+
+      /* Typography — Font Families */
+      --font-pt-serif: 'PT Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+      --font-inter-tight: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-jetbrains-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-ui-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+      /* Typography — Scale */
+      --text-caption: 10px;
+      --leading-caption: 1.2;
+      --tracking-caption: 0.24px;
+      --text-body: 14px;
+      --leading-body: 1.55;
+      --text-subheading: 20px;
+      --leading-subheading: 1.3;
+      --tracking-subheading: -0.2px;
+      --text-heading-sm: 32px;
+      --leading-heading-sm: 1.15;
+      --tracking-heading-sm: -0.4px;
+      --text-heading: 49px;
+      --leading-heading: 1.05;
+      --tracking-heading: -1px;
+      --text-heading-lg: 72px;
+      --leading-heading-lg: 0.98;
+      --tracking-heading-lg: -1.8px;
+      --text-display: 89px;
+      --leading-display: 0.94;
+      --tracking-display: -3.1px;
+
+      /* Typography — Weights */
+      --font-weight-light: 300;
+      --font-weight-regular: 400;
+      --font-weight-medium: 500;
+      --font-weight-semibold: 600;
+
+      /* Spacing */
+      --spacing-4: 4px;
+      --spacing-6: 6px;
+      --spacing-7: 7px;
+      --spacing-8: 8px;
+      --spacing-10: 10px;
+      --spacing-12: 12px;
+      --spacing-14: 14px;
+      --spacing-16: 16px;
+      --spacing-18: 18px;
+      --spacing-20: 20px;
+      --spacing-22: 22px;
+      --spacing-24: 24px;
+      --spacing-28: 28px;
+      --spacing-30: 30px;
+      --spacing-32: 32px;
+      --spacing-44: 44px;
+
+      /* Layout */
+      --page-max-width: 1280px;
+      --card-padding: 32px;
+      --element-gap: 16px;
+
+      /* Named Radii */
+      --radius-tags: 2px;
+      --radius-cards: 0px;
+      --radius-buttons: 4px;
+      --radius-logotiles: 4px;
+
+      /* Shadows */
+      --shadow-sm: rgba(197, 255, 74, 0.45) 0px 0px 8px 0px;
+
+      /* Surfaces */
+      --surface-canvas: #060606;
+      --surface-card: #1f1f1f;
+      --surface-raised: #252525;
+      --surface-hover: #313131;
+    }
+
+    /* ============ 基础 ============ */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-inter-tight);
+      font-size: var(--text-body);
+      line-height: var(--leading-body);
+      background: var(--surface-canvas);
+      color: var(--color-pearl);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    ::selection {
+      background: var(--color-signal-lime);
+      color: var(--color-void-black);
+    }
+
+    .container {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-32);
+    }
+
+    section { padding: 110px 0; position: relative; }
+
+    /* 等宽小标签 */
+    .mono-label {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-signal-lime);
+    }
+
+    .section-head {
+      margin-bottom: var(--spacing-44);
+      border-bottom: 1px solid var(--color-iron);
+      padding-bottom: var(--spacing-24);
+    }
+
+    .section-head .mono-label { display: block; margin-bottom: var(--spacing-12); }
+
+    .section-head h2 {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-heading);
+      line-height: var(--leading-heading);
+      letter-spacing: var(--tracking-heading);
+      color: var(--color-chalk);
+      font-weight: 400;
+    }
+
+    .section-head h2 em {
+      font-style: normal;
+      color: var(--color-signal-lime);
+    }
+
+    /* ============ 导航 ============ */
+    header {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 1000;
+      background: rgba(6, 6, 6, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--color-iron);
+      transition: 0.3s ease;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: var(--font-jetbrains-mono);
+      font-size: 13px;
+      letter-spacing: 1px;
+      color: var(--color-chalk);
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-10);
+    }
+
+    .logo .dot {
+      width: 8px; height: 8px;
+      background: var(--color-signal-lime);
+      box-shadow: var(--shadow-sm);
+      display: inline-block;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: var(--spacing-32);
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-ash);
+      transition: color 0.2s ease;
+      position: relative;
+    }
+
+    .nav-links a .idx { color: var(--color-fog); margin-right: 4px; }
+    .nav-links a:hover { color: var(--color-chalk); }
+    .nav-links a:hover .idx { color: var(--color-signal-lime); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      background: none;
+      border: 1px solid var(--color-iron);
+      border-radius: var(--radius-buttons);
+      padding: 10px;
+    }
+
+    .hamburger span {
+      width: 22px; height: 2px;
+      background: var(--color-chalk);
+      transition: 0.25s ease;
+    }
+
+    /* ============ Hero ============ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse 60% 45% at 75% 15%, rgba(197, 255, 74, 0.06), transparent),
+        var(--surface-canvas);
+      border-bottom: 1px solid var(--color-iron);
+      padding-top: 64px;
+    }
+
+    .hero-inner { width: 100%; }
+
+    .hero-top {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-fog);
+      margin-bottom: var(--spacing-44);
+    }
+
+    .hero-top .status { display: flex; align-items: center; gap: var(--spacing-8); }
+    .hero-top .status .pulse {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--color-signal-lime);
+      box-shadow: var(--shadow-sm);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse { 50% { opacity: 0.35; } }
+
+    .hero-title {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-display);
+      line-height: var(--leading-display);
+      letter-spacing: var(--tracking-display);
+      color: var(--color-chalk);
+      font-weight: 400;
+      margin-bottom: var(--spacing-24);
+    }
+
+    .hero-title .accent { color: var(--color-signal-lime); }
+
+    .hero-sub {
+      font-size: var(--text-subheading);
+      line-height: var(--leading-subheading);
+      color: var(--color-smoke);
+      font-weight: var(--font-weight-light);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .hero-sub strong {
+      font-family: var(--font-jetbrains-mono);
+      font-weight: var(--font-weight-medium);
+      color: var(--color-signal-lime);
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero-desc {
+      max-width: 540px;
+      color: var(--color-ash);
+      margin-bottom: var(--spacing-32);
+    }
+
+    .btn-group { display: flex; gap: var(--spacing-14); flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-8);
+      padding: var(--spacing-14) var(--spacing-28);
+      border-radius: var(--radius-buttons);
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: var(--font-weight-medium);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--color-signal-lime);
+      color: var(--color-void-black);
+    }
+
+    .btn-primary:hover {
+      background: #d4ff6e;
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: var(--color-slate);
+      color: var(--color-bone);
+      background: transparent;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--color-signal-lime);
+      color: var(--color-signal-lime);
+      transform: translateY(-2px);
+    }
+
+    /* Hero 底部信息条 */
+    .hero-foot {
+      margin-top: var(--spacing-44);
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-8) var(--spacing-32);
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-fog);
+      border-top: 1px solid var(--color-iron);
+      padding-top: var(--spacing-20);
+    }
+
+    .hero-foot span b { color: var(--color-bone); font-weight: var(--font-weight-regular); }
+
+    /* ============ 关于 ============ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--spacing-44);
+    }
+
+    .about-text p {
+      color: var(--color-ash);
+      margin-bottom: var(--spacing-20);
+      font-size: var(--text-body);
+    }
+
+    .about-text p:first-child {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-subheading);
+      line-height: var(--leading-subheading);
+      color: var(--color-bone);
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--color-iron);
+      border: 1px solid var(--color-iron);
+    }
+
+    .stat-cell {
+      background: var(--surface-card);
+      padding: var(--spacing-28) var(--spacing-24);
+      transition: background 0.2s ease;
+    }
+
+    .stat-cell:hover { background: var(--surface-raised); }
+
+    .stat-cell .num {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-heading-sm);
+      line-height: var(--leading-heading-sm);
+      color: var(--color-signal-lime);
+      display: block;
+    }
+
+    .stat-cell .num sup {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      color: var(--color-fog);
+      margin-left: 2px;
+    }
+
+    .stat-cell .lbl {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-fog);
+      margin-top: var(--spacing-8);
+      display: block;
+    }
+
+    /* ============ 技能 ============ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-24);
+    }
+
+    .skill-card {
+      background: var(--surface-card);
+      border: 1px solid var(--color-iron);
+      border-radius: var(--radius-cards);
+      padding: var(--card-padding);
+      transition: all 0.2s ease;
+    }
+
+    .skill-card:hover {
+      background: var(--surface-raised);
+      border-color: var(--color-fog);
+      transform: translateY(-4px);
+    }
+
+    .skill-card .head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: var(--spacing-24);
+      padding-bottom: var(--spacing-16);
+      border-bottom: 1px solid var(--color-iron);
+    }
+
+    .skill-card h3 {
+      font-family: var(--font-pt-serif);
+      font-size: 17px;
+      color: var(--color-chalk);
+      font-weight: 400;
+    }
+
+    .skill-card .head .mono-label { letter-spacing: 1px; }
+
+    .skill-row { margin-bottom: var(--spacing-18); }
+    .skill-row:last-child { margin-bottom: 0; }
+
+    .skill-row .meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 0.5px;
+      margin-bottom: var(--spacing-8);
+    }
+
+    .skill-row .meta .name { color: var(--color-pearl); }
+    .skill-row .meta .pct { color: var(--color-signal-lime); }
+
+    .skill-bar {
+      height: 4px;
+      background: var(--color-graphite);
+      overflow: hidden;
+    }
+
+    .skill-bar .fill {
+      height: 100%;
+      width: 0;
+      background: var(--color-signal-lime);
+      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    /* ============ 项目 ============ */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--spacing-24);
+    }
+
+    .project-card {
+      background: var(--surface-card);
+      border: 1px solid var(--color-iron);
+      border-radius: var(--radius-cards);
+      overflow: hidden;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      border-color: var(--color-fog);
+      background: var(--surface-raised);
+      transform: translateY(-4px);
+    }
+
+    .project-thumb {
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      background:
+        linear-gradient(135deg, rgba(197, 255, 74, 0.08), transparent 60%),
+        var(--color-graphite);
+      border-bottom: 1px solid var(--color-iron);
+      position: relative;
+    }
+
+    .project-thumb .idx {
+      position: absolute;
+      top: var(--spacing-16);
+      left: var(--spacing-16);
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      color: var(--color-signal-lime);
+      letter-spacing: 1px;
+    }
+
+    .project-body {
+      padding: var(--spacing-24);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .project-body h3 {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-subheading);
+      color: var(--color-chalk);
+      font-weight: 400;
+      margin-bottom: var(--spacing-10);
+    }
+
+    .project-body p {
+      color: var(--color-ash);
+      font-size: 13px;
+      flex: 1;
+      margin-bottom: var(--spacing-16);
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-6);
+      margin-bottom: var(--spacing-20);
+    }
+
+    .tag {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 0.5px;
+      color: var(--color-signal-lime);
+      background: rgba(197, 255, 74, 0.08);
+      border: 1px solid rgba(197, 255, 74, 0.22);
+      border-radius: var(--radius-tags);
+      padding: 4px 10px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: var(--spacing-20);
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .project-links a { color: var(--color-bone); transition: color 0.2s ease; }
+    .project-links a:hover { color: var(--color-signal-lime); }
+
+    /* ============ 经历 ============ */
+    .timeline {
+      position: relative;
+      max-width: 760px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px; top: 0; bottom: 0;
+      width: 1px;
+      background: var(--color-iron);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: var(--spacing-44);
+      padding-bottom: var(--spacing-44);
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 5px;
+      width: 15px; height: 15px;
+      background: var(--surface-canvas);
+      border: 1px solid var(--color-signal-lime);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .timeline-item .time {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 2px;
+      color: var(--color-signal-lime);
+      text-transform: uppercase;
+      margin-bottom: var(--spacing-8);
+      display: block;
+    }
+
+    .timeline-item h3 {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-subheading);
+      color: var(--color-chalk);
+      font-weight: 400;
+      margin-bottom: var(--spacing-6);
+    }
+
+    .timeline-item .org {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      color: var(--color-smoke);
+      letter-spacing: 0.5px;
+      margin-bottom: var(--spacing-12);
+      display: block;
+    }
+
+    .timeline-item p { color: var(--color-ash); font-size: 13px; }
+
+    /* ============ 联系 ============ */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: var(--spacing-44);
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-family: var(--font-pt-serif);
+      font-size: var(--text-heading-sm);
+      color: var(--color-chalk);
+      font-weight: 400;
+      margin-bottom: var(--spacing-16);
+    }
+
+    .contact-info > p {
+      color: var(--color-ash);
+      margin-bottom: var(--spacing-32);
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      border-top: 1px solid var(--color-iron);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-16);
+      padding: var(--spacing-16) 0;
+      border-bottom: 1px solid var(--color-iron);
+      font-size: 13px;
+    }
+
+    .contact-item .icon {
+      width: 40px; height: 40px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--color-iron);
+      border-radius: var(--radius-logotiles);
+      background: var(--surface-card);
+      font-size: 16px;
+    }
+
+    .contact-item .lbl {
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-fog);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .contact-item .val { color: var(--color-bone); }
+
+    .contact-form {
+      background: var(--surface-card);
+      border: 1px solid var(--color-iron);
+      border-radius: var(--radius-cards);
+      padding: var(--card-padding);
+    }
+
+    .form-group { margin-bottom: var(--spacing-20); }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-fog);
+      margin-bottom: var(--spacing-8);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--spacing-14) var(--spacing-16);
+      background: var(--color-void-black);
+      border: 1px solid var(--color-iron);
+      border-radius: var(--radius-buttons);
+      color: var(--color-chalk);
+      font-family: var(--font-inter-tight);
+      font-size: var(--text-body);
+      transition: border-color 0.2s ease;
+      resize: vertical;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: var(--color-fog); }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-signal-lime);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group textarea { min-height: 130px; }
+
+    /* ============ 页脚 ============ */
+    footer {
+      border-top: 1px solid var(--color-iron);
+      padding: var(--spacing-32) 0;
+    }
+
+    .foot-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: var(--spacing-16);
+      font-family: var(--font-jetbrains-mono);
+      font-size: var(--text-caption);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--color-fog);
+    }
+
+    .foot-inner b { color: var(--color-signal-lime); font-weight: var(--font-weight-regular); }
+
+    /* ============ 揭示动画 ============ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ============ 响应式 ============ */
+    @media (max-width: 900px) {
+      .hero-title { font-size: var(--text-heading-lg); line-height: var(--leading-heading-lg); }
+      .about-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 72px 0; }
+      .container { padding: 0 var(--spacing-20); }
+
+      .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 72%;
+        height: 100vh;
+        background: rgba(6, 6, 6, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        gap: var(--spacing-28);
+        transition: right 0.3s ease;
+        border-left: 1px solid var(--color-iron);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a { font-size: 12px; }
+      .hamburger { display: flex; z-index: 1001; }
+      .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+      .hamburger.active span:nth-child(2) { opacity: 0; }
+      .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+
+      .hero-title { font-size: 48px; letter-spacing: -1px; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .about-stats { grid-template-columns: 1fr 1fr; }
+      .section-head h2 { font-size: var(--text-heading-sm); }
+      .hero-top { flex-direction: column; gap: var(--spacing-8); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ 导航 ============ -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo">
+          <span class="dot"></span> WYZ — PORTFOLIO
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home"><span class="idx">01</span>首页</a></li>
+          <li><a href="#about"><span class="idx">02</span>关于</a></li>
+          <li><a href="#skills"><span class="idx">03</span>技能</a></li>
+          <li><a href="#projects"><span class="idx">04</span>项目</a></li>
+          <li><a href="#experience"><span class="idx">05</span>经历</a></li>
+          <li><a href="#contact"><span class="idx">06</span>联系</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ Hero ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-top">
+        <span class="status"><span class="pulse"></span> AVAILABLE FOR WORK</span>
+        <span>© 2024 / PORTFOLIO</span>
+      </div>
+
+      <h1 class="hero-title">
+        温曜榛<br />
+        <span class="accent">创造有意义的</span><br />数字体验
+      </h1>
+
+      <p class="hero-sub">
+        全栈开发者 · <strong>Full-Stack Developer</strong>
+      </p>
+
+      <p class="hero-desc">
+        我专注于构建高性能、优雅的 Web 应用，将复杂的问题转化为简洁的解决方案。
+        从代码架构到交互细节，我追求每一处的精准与克制。
+      </p>
+
+      <div class="btn-group">
+        <a href="#projects" class="btn btn-primary">查看项目 ↗</a>
+        <a href="#contact" class="btn btn-outline">联系我</a>
+      </div>
+
+      <div class="hero-foot">
+        <span>BASE <b>中国 · 北京</b></span>
+        <span>FOCUS <b>Web / 全栈</b></span>
+        <span>STACK <b>TS · Node · React</b></span>
+        <span>STATUS <b style="color: var(--color-signal-lime);">OPEN</b></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 关于 ============ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="mono-label">01 / About</span>
+        <h2>关于<em>我</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            你好，我是温曜榛。一名热爱技术与设计、相信「少即是多」的全栈开发者。
+            我享受在代码与美学之间寻找平衡，打造真正有价值的产品。
+          </p>
+          <p>
+            拥有计算机科学背景，过去几年专注 Web 开发，积累了从概念设计到产品上线的完整经验。
+            我关注工程效率、代码质量与用户体验，也乐于探索 AI、开源等前沿技术。
+          </p>
+          <p>
+            工作之余，我喜欢摄影、技术写作与徒步。目前正寻找新的机会，
+            期待与志同道合的团队一起，用技术解决真实世界的问题。
+          </p>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat-cell">
+            <span class="num" data-count="5">0<sup>+</sup></span>
+            <span class="lbl">Years Experience</span>
+          </div>
+          <div class="stat-cell">
+            <span class="num" data-count="40">0<sup>+</sup></span>
+            <span class="lbl">Projects Done</span>
+          </div>
+          <div class="stat-cell">
+            <span class="num" data-count="25">0<sup>+</sup></span>
+            <span class="lbl">Happy Clients</span>
+          </div>
+          <div class="stat-cell">
+            <span class="num" data-count="10">0<sup>+</sup></span>
+            <span class="lbl">Awards Won</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 技能 ============ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="mono-label">02 / Skills</span>
+        <h2>技术<em>栈</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="head">
+            <h3>前端开发</h3>
+            <span class="mono-label">FRONT-END</span>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">HTML / CSS</span><span class="pct">95%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="95"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">JavaScript / TypeScript</span><span class="pct">90%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">React / Vue</span><span class="pct">88%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="88"></div></div>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="head">
+            <h3>后端开发</h3>
+            <span class="mono-label">BACK-END</span>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">Node.js / Python</span><span class="pct">85%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">数据库 (SQL / MongoDB)</span><span class="pct">82%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="82"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">REST / GraphQL API</span><span class="pct">80%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="80"></div></div>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="head">
+            <h3>工具与其他</h3>
+            <span class="mono-label">TOOLING</span>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">Git / Docker</span><span class="pct">86%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="86"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">UI / UX 设计</span><span class="pct">75%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-row">
+            <div class="meta"><span class="name">DevOps / CI-CD</span><span class="pct">72%</span></div>
+            <div class="skill-bar"><div class="fill" data-width="72"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 项目 ============ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="mono-label">03 / Projects</span>
+        <h2>精选<em>项目</em></h2>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-thumb"><span class="idx">P-01</span>🛒</div>
+          <div class="project-body">
+            <h3>智能电商平台</h3>
+            <p>功能完整的电商平台，包含商品管理、购物车、订单系统与实时数据看板，支持高并发访问。</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#">演示 ↗</a>
+              <a href="#">源码 ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-thumb"><span class="idx">P-02</span>📊</div>
+          <div class="project-body">
+            <h3>数据可视化仪表盘</h3>
+            <p>实时数据可视化解决方案，支持多种图表类型、自定义主题和数据导出功能。</p>
+            <div class="project-tags">
+              <span class="tag">Vue</span>
+              <span class="tag">ECharts</span>
+              <span class="tag">WebSocket</span>
+            </div>
+            <div class="project-links">
+              <a href="#">演示 ↗</a>
+              <a href="#">源码 ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-thumb"><span class="idx">P-03</span>📱</div>
+          <div class="project-body">
+            <h3>移动端社交应用</h3>
+            <p>跨平台社交应用，支持即时通讯、动态分享、好友系统等核心社交功能。</p>
+            <div class="project-tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">GraphQL</span>
+            </div>
+            <div class="project-links">
+              <a href="#">演示 ↗</a>
+              <a href="#">源码 ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-thumb"><span class="idx">P-04</span>🤖</div>
+          <div class="project-body">
+            <h3>AI 智能助手</h3>
+            <p>基于大语言模型的智能助手，支持自然语言对话、任务自动化和知识问答。</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">FastAPI</span>
+              <span class="tag">LLM</span>
+            </div>
+            <div class="project-links">
+              <a href="#">演示 ↗</a>
+              <a href="#">源码 ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-thumb"><span class="idx">P-05</span>🎮</div>
+          <div class="project-body">
+            <h3>在线协作白板</h3>
+            <p>支持多人实时协作的在线白板，包含绘图工具、评论系统和版本历史功能。</p>
+            <div class="project-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Canvas</span>
+              <span class="tag">WebRTC</span>
+            </div>
+            <div class="project-links">
+              <a href="#">演示 ↗</a>
+              <a href="#">源码 ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card reveal">
+          <div class="project-thumb"><span class="idx">P-06</span>☁️</div>
+          <div class="project-body">
+            <h3>个人云存储系统</h3>
+            <p>自建云存储解决方案，支持文件上传下载、在线预览、权限管理和分享链接。</p>
+            <div class="project-tags">
+              <span class="tag">Go</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Redis</span>
+            </div>
+            <div class="project-links">
+              <a href="#">演示 ↗</a>
+              <a href="#">源码 ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 经历 ============ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="mono-label">04 / Experience</span>
+        <h2>工作<em>经历</em></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <span class="time">2023 — 至今</span>
+          <h3>高级全栈工程师</h3>
+          <span class="org">某科技公司 · 技术团队</span>
+          <p>负责核心产品的前后端架构设计与开发，主导技术升级，带领 5 人小组完成多个关键项目。</p>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="time">2021 — 2023</span>
+          <h3>前端开发工程师</h3>
+          <span class="org">某互联网公司 · 产品研发部</span>
+          <p>负责公司 Web 产品的界面开发与性能优化，将首屏加载速度提升 60%。</p>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="time">2019 — 2021</span>
+          <h3>初级开发工程师</h3>
+          <span class="org">某初创公司</span>
+          <p>参与多个创业项目的开发，快速学习并实践了完整的前后端开发流程。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 联系 ============ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="mono-label">05 / Contact</span>
+        <h2>联系<em>我</em></h2>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <h3>有想法？<br />让我们一起聊聊。</h3>
+          <p>
+            无论是项目合作、工作机会，还是单纯的技术交流，
+            我都非常乐意收到你的消息，并会尽快回复。
+          </p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div class="icon">📧</div>
+              <div><span class="lbl">Email</span><span class="val">hello@wenyaozhen.com</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon">📱</div>
+              <div><span class="lbl">Phone</span><span class="val">+86 138 0000 0000</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon">📍</div>
+              <div><span class="lbl">Location</span><span class="val">中国 · 北京</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon">🐙</div>
+              <div><span class="lbl">GitHub</span><span class="val">github.com/wenyaozhen</span></div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm">
+          <div class="form-group">
+            <label for="name">姓名 / Name</label>
+            <input type="text" id="name" placeholder="你的姓名" required />
+          </div>
+          <div class="form-group">
+            <label for="email">邮箱 / Email</label>
+            <input type="email" id="email" placeholder="你的邮箱" required />
+          </div>
+          <div class="form-group">
+            <label for="message">留言 / Message</label>
+            <textarea id="message" placeholder="想对我说些什么..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+            发送消息 ↗
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 页脚 ============ -->
+  <footer>
+    <div class="container foot-inner">
+      <span>© 2024 <b>温曜榛</b> · All rights reserved</span>
+      <span>Design & Build with <b>♥</b></span>
+      <span>WYZ — PORTFOLIO <b>V1.0</b></span>
+    </div>
+  </footer>
+
+  <script>
+    // ============ 移动端菜单 ============
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // ============ 数字滚动 ============
+    const counters = document.querySelectorAll('[data-count]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.count);
+          let current = 0;
+          const duration = 1400;
+          const step = Math.max(1, Math.floor(target / 50));
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            el.textContent = current;
+          }, duration / 50);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+
+    // ============ 技能条动画 ============
+    const skillBars = document.querySelectorAll('.skill-bar .fill');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.width = entry.target.dataset.width + '%';
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    skillBars.forEach(b => skillObserver.observe(b));
+
+    // ============ 滚动揭示 ============
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ============ 表单提交 ============
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert('感谢你的留言，' + name + '！我会尽快回复你。');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

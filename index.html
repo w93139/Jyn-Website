@@ -6,101 +6,76 @@
   <meta name="description" content="温曜榛 — 个人作品集与网站" />
   <title>温曜榛 · Portfolio</title>
 
-  <!-- 字体 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Inter+Tight:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
   <style>
     :root {
       /* Colors */
-      --color-void-black: #000000;
-      --color-carbon: #060606;
-      --color-graphite: #252525;
-      --color-onyx: #1f1f1f;
-      --color-iron: #313131;
-      --color-slate: #3d3d3d;
-      --color-fog: #525252;
-      --color-ash: #7a7a7a;
-      --color-smoke: #8a8a8a;
-      --color-pearl: #c5c5c5;
-      --color-bone: #e5e5e5;
-      --color-chalk: #ffffff;
-      --color-signal-lime: #c5ff4a;
-      --color-olive-depth: #597321;
-      --color-moss-shadow: #314013;
+      --color-abyss-black: #070708;
+      --color-pure-white: #ffffff;
+      --color-steel-gray: #8f8f93;
+      --color-carbon: #000000;
+      --color-electric-cobalt: #1954ec;
+      --gradient-electric-cobalt: linear-gradient(135deg, rgb(0, 204, 255), rgb(12, 146, 246) 43%, rgb(25, 84, 236) 75%, rgb(25, 84, 236));
 
       /* Typography — Font Families */
-      --font-pt-serif: 'PT Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-      --font-inter-tight: 'Inter Tight', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-jetbrains-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      --font-ui-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-graphik: 'Graphik', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-darius: 'Darius', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-arial: 'Arial', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
       /* Typography — Scale */
       --text-caption: 10px;
       --leading-caption: 1.2;
-      --tracking-caption: 0.24px;
-      --text-body: 14px;
-      --leading-body: 1.55;
-      --text-subheading: 20px;
-      --leading-subheading: 1.3;
-      --tracking-subheading: -0.2px;
-      --text-heading-sm: 32px;
-      --leading-heading-sm: 1.15;
-      --tracking-heading-sm: -0.4px;
-      --text-heading: 49px;
-      --leading-heading: 1.05;
-      --tracking-heading: -1px;
-      --text-heading-lg: 72px;
-      --leading-heading-lg: 0.98;
-      --tracking-heading-lg: -1.8px;
-      --text-display: 89px;
-      --leading-display: 0.94;
-      --tracking-display: -3.1px;
+      --tracking-caption: 4px;
+      --text-subheading: 18px;
+      --leading-subheading: 1.4;
+      --tracking-subheading: -0.36px;
+      --text-heading: 45px;
+      --leading-heading: 1.13;
+      --text-heading-lg: 52px;
+      --leading-heading-lg: 1.13;
+      --text-display: 72px;
+      --leading-display: 1.13;
 
       /* Typography — Weights */
+      --font-weight-extralight: 200;
       --font-weight-light: 300;
       --font-weight-regular: 400;
       --font-weight-medium: 500;
-      --font-weight-semibold: 600;
 
       /* Spacing */
-      --spacing-4: 4px;
-      --spacing-6: 6px;
-      --spacing-7: 7px;
+      --spacing-unit: 4px;
       --spacing-8: 8px;
-      --spacing-10: 10px;
-      --spacing-12: 12px;
-      --spacing-14: 14px;
-      --spacing-16: 16px;
-      --spacing-18: 18px;
+      --spacing-9: 9px;
       --spacing-20: 20px;
-      --spacing-22: 22px;
-      --spacing-24: 24px;
-      --spacing-28: 28px;
-      --spacing-30: 30px;
+      --spacing-23: 23px;
+      --spacing-25: 25px;
+      --spacing-27: 27px;
       --spacing-32: 32px;
-      --spacing-44: 44px;
+      --spacing-39: 39px;
+      --spacing-59: 59px;
+      --spacing-63: 63px;
+      --spacing-99: 99px;
+      --spacing-119: 119px;
+      --spacing-171: 171px;
+      --spacing-238: 238px;
 
       /* Layout */
-      --page-max-width: 1280px;
+      --page-max-width: 1200px;
+      --section-gap: 59px;
       --card-padding: 32px;
-      --element-gap: 16px;
+      --element-gap: 23px;
+
+      /* Border Radius */
+      --radius-md: 4px;
 
       /* Named Radii */
-      --radius-tags: 2px;
       --radius-cards: 0px;
-      --radius-buttons: 4px;
-      --radius-logotiles: 4px;
-
-      /* Shadows */
-      --shadow-sm: rgba(197, 255, 74, 0.45) 0px 0px 8px 0px;
+      --radius-links: 4px;
+      --radius-badges: 0px;
+      --radius-buttons: 0px;
 
       /* Surfaces */
-      --surface-canvas: #060606;
-      --surface-card: #1f1f1f;
-      --surface-raised: #252525;
-      --surface-hover: #313131;
+      --surface-abyss-canvas: #070708;
+      --surface-particle-field: #1954ec;
     }
 
     /* ============ 基础 ============ */
@@ -109,11 +84,11 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: var(--font-inter-tight);
-      font-size: var(--text-body);
-      line-height: var(--leading-body);
-      background: var(--surface-canvas);
-      color: var(--color-pearl);
+      font-family: var(--font-graphik);
+      font-size: 15px;
+      line-height: 1.6;
+      background: var(--surface-abyss-canvas);
+      color: var(--color-steel-gray);
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
@@ -123,8 +98,8 @@
     img { max-width: 100%; display: block; }
 
     ::selection {
-      background: var(--color-signal-lime);
-      color: var(--color-void-black);
+      background: var(--color-electric-cobalt);
+      color: var(--color-pure-white);
     }
 
     .container {
@@ -133,37 +108,57 @@
       padding: 0 var(--spacing-32);
     }
 
-    section { padding: 110px 0; position: relative; }
+    section { padding: var(--spacing-119) 0; position: relative; }
 
-    /* 等宽小标签 */
-    .mono-label {
-      font-family: var(--font-jetbrains-mono);
+    /* 顶部小标签（全大写 + 大间距） */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--spacing-9);
       font-size: var(--text-caption);
-      letter-spacing: 3px;
+      line-height: var(--leading-caption);
+      letter-spacing: var(--tracking-caption);
       text-transform: uppercase;
-      color: var(--color-signal-lime);
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: var(--spacing-23);
     }
 
-    .section-head {
-      margin-bottom: var(--spacing-44);
-      border-bottom: 1px solid var(--color-iron);
-      padding-bottom: var(--spacing-24);
+    .eyebrow .line {
+      width: 28px;
+      height: 1px;
+      background: var(--color-electric-cobalt);
     }
 
-    .section-head .mono-label { display: block; margin-bottom: var(--spacing-12); }
+    .section-head { margin-bottom: var(--spacing-59); }
 
     .section-head h2 {
-      font-family: var(--font-pt-serif);
+      font-family: var(--font-darius);
       font-size: var(--text-heading);
       line-height: var(--leading-heading);
-      letter-spacing: var(--tracking-heading);
-      color: var(--color-chalk);
-      font-weight: 400;
+      font-weight: var(--font-weight-light);
+      color: var(--color-pure-white);
     }
 
-    .section-head h2 em {
-      font-style: normal;
-      color: var(--color-signal-lime);
+    .section-head h2 .grad {
+      background: var(--gradient-electric-cobalt);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-head p {
+      margin-top: var(--spacing-20);
+      max-width: 480px;
+      font-size: 15px;
+      color: var(--color-steel-gray);
+    }
+
+    .grad-text {
+      background: var(--gradient-electric-cobalt);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* ============ 导航 ============ */
@@ -171,71 +166,64 @@
       position: fixed;
       top: 0; left: 0; width: 100%;
       z-index: 1000;
-      background: rgba(6, 6, 6, 0.82);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border-bottom: 1px solid var(--color-iron);
-      transition: 0.3s ease;
+      background: rgba(7, 7, 8, 0.8);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 72px;
     }
 
     .logo {
-      font-family: var(--font-jetbrains-mono);
-      font-size: 13px;
-      letter-spacing: 1px;
-      color: var(--color-chalk);
+      font-size: 14px;
+      font-weight: var(--font-weight-medium);
+      letter-spacing: 2px;
+      color: var(--color-pure-white);
       display: flex;
       align-items: center;
-      gap: var(--spacing-10);
+      gap: var(--spacing-8);
+      text-transform: uppercase;
     }
 
     .logo .dot {
-      width: 8px; height: 8px;
-      background: var(--color-signal-lime);
-      box-shadow: var(--shadow-sm);
+      width: 7px; height: 7px;
+      background: var(--gradient-electric-cobalt);
       display: inline-block;
+      box-shadow: 0 0 12px rgba(25, 84, 236, 0.8);
     }
 
-    .nav-links {
-      display: flex;
-      gap: var(--spacing-32);
-      align-items: center;
-    }
+    .nav-links { display: flex; gap: var(--spacing-32); align-items: center; }
 
     .nav-links a {
-      font-family: var(--font-jetbrains-mono);
       font-size: var(--text-caption);
-      letter-spacing: 1.5px;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: var(--color-ash);
-      transition: color 0.2s ease;
-      position: relative;
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+      transition: color 0.25s ease;
     }
 
-    .nav-links a .idx { color: var(--color-fog); margin-right: 4px; }
-    .nav-links a:hover { color: var(--color-chalk); }
-    .nav-links a:hover .idx { color: var(--color-signal-lime); }
+    .nav-links a:hover { color: var(--color-pure-white); }
 
     .hamburger {
       display: none;
       flex-direction: column;
-      gap: 6px;
+      gap: 5px;
       cursor: pointer;
       background: none;
-      border: 1px solid var(--color-iron);
-      border-radius: var(--radius-buttons);
-      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 11px;
     }
 
     .hamburger span {
-      width: 22px; height: 2px;
-      background: var(--color-chalk);
+      width: 22px; height: 1.5px;
+      background: var(--color-pure-white);
       transition: 0.25s ease;
     }
 
@@ -244,206 +232,204 @@
       min-height: 100vh;
       display: flex;
       align-items: center;
+      padding-top: 72px;
       background:
-        radial-gradient(ellipse 60% 45% at 75% 15%, rgba(197, 255, 74, 0.06), transparent),
-        var(--surface-canvas);
-      border-bottom: 1px solid var(--color-iron);
-      padding-top: 64px;
+        radial-gradient(ellipse 55% 50% at 80% 0%, rgba(25, 84, 236, 0.14), transparent 60%),
+        radial-gradient(ellipse 40% 40% at 10% 100%, rgba(0, 204, 255, 0.06), transparent 55%),
+        var(--surface-abyss-canvas);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
-
-    .hero-inner { width: 100%; }
 
     .hero-top {
       display: flex;
       justify-content: space-between;
-      font-family: var(--font-jetbrains-mono);
+      align-items: center;
       font-size: var(--text-caption);
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      color: var(--color-fog);
-      margin-bottom: var(--spacing-44);
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: var(--spacing-63);
     }
 
-    .hero-top .status { display: flex; align-items: center; gap: var(--spacing-8); }
+    .hero-top .status { display: flex; align-items: center; gap: var(--spacing-9); }
     .hero-top .status .pulse {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--color-signal-lime);
-      box-shadow: var(--shadow-sm);
-      animation: pulse 2s infinite;
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--gradient-electric-cobalt);
+      box-shadow: 0 0 12px rgba(25, 84, 236, 0.9);
+      animation: pulse 2.2s infinite;
     }
-    @keyframes pulse { 50% { opacity: 0.35; } }
+    @keyframes pulse { 50% { opacity: 0.3; } }
 
     .hero-title {
-      font-family: var(--font-pt-serif);
+      font-family: var(--font-darius);
       font-size: var(--text-display);
       line-height: var(--leading-display);
-      letter-spacing: var(--tracking-display);
-      color: var(--color-chalk);
-      font-weight: 400;
-      margin-bottom: var(--spacing-24);
+      font-weight: var(--font-weight-extralight);
+      color: var(--color-pure-white);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--spacing-27);
     }
 
-    .hero-title .accent { color: var(--color-signal-lime); }
+    .hero-title .grad {
+      background: var(--gradient-electric-cobalt);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
     .hero-sub {
       font-size: var(--text-subheading);
       line-height: var(--leading-subheading);
-      color: var(--color-smoke);
+      letter-spacing: var(--tracking-subheading);
       font-weight: var(--font-weight-light);
-      margin-bottom: var(--spacing-16);
-    }
-
-    .hero-sub strong {
-      font-family: var(--font-jetbrains-mono);
-      font-weight: var(--font-weight-medium);
-      color: var(--color-signal-lime);
-      font-size: 15px;
-      letter-spacing: 0.5px;
+      color: var(--color-pure-white);
+      margin-bottom: var(--spacing-20);
     }
 
     .hero-desc {
-      max-width: 540px;
-      color: var(--color-ash);
-      margin-bottom: var(--spacing-32);
+      max-width: 520px;
+      color: var(--color-steel-gray);
+      margin-bottom: var(--spacing-39);
+      font-weight: var(--font-weight-light);
     }
 
-    .btn-group { display: flex; gap: var(--spacing-14); flex-wrap: wrap; }
+    .btn-group { display: flex; gap: var(--spacing-20); flex-wrap: wrap; }
 
     .btn {
       display: inline-flex;
       align-items: center;
-      gap: var(--spacing-8);
-      padding: var(--spacing-14) var(--spacing-28);
+      gap: var(--spacing-9);
+      padding: var(--spacing-20) var(--spacing-32);
       border-radius: var(--radius-buttons);
-      font-family: var(--font-jetbrains-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 1.5px;
+      font-size: 11px;
+      letter-spacing: 2px;
       text-transform: uppercase;
       font-weight: var(--font-weight-medium);
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
       border: 1px solid transparent;
     }
 
     .btn-primary {
-      background: var(--color-signal-lime);
-      color: var(--color-void-black);
+      background: var(--gradient-electric-cobalt);
+      color: var(--color-pure-white);
     }
 
     .btn-primary:hover {
-      background: #d4ff6e;
-      box-shadow: var(--shadow-sm);
+      filter: brightness(1.15);
       transform: translateY(-2px);
+      box-shadow: 0 10px 32px rgba(25, 84, 236, 0.4);
     }
 
     .btn-outline {
-      border-color: var(--color-slate);
-      color: var(--color-bone);
+      border-color: rgba(255, 255, 255, 0.18);
+      color: var(--color-pure-white);
       background: transparent;
     }
 
     .btn-outline:hover {
-      border-color: var(--color-signal-lime);
-      color: var(--color-signal-lime);
+      border-color: var(--color-electric-cobalt);
+      color: var(--color-pure-white);
       transform: translateY(-2px);
     }
 
-    /* Hero 底部信息条 */
     .hero-foot {
-      margin-top: var(--spacing-44);
+      margin-top: var(--spacing-99);
       display: flex;
       flex-wrap: wrap;
-      gap: var(--spacing-8) var(--spacing-32);
-      font-family: var(--font-jetbrains-mono);
+      gap: var(--spacing-9) var(--spacing-39);
       font-size: var(--text-caption);
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--color-fog);
-      border-top: 1px solid var(--color-iron);
-      padding-top: var(--spacing-20);
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: var(--spacing-27);
     }
 
-    .hero-foot span b { color: var(--color-bone); font-weight: var(--font-weight-regular); }
+    .hero-foot span b {
+      color: var(--color-pure-white);
+      font-weight: var(--font-weight-regular);
+    }
 
     /* ============ 关于 ============ */
     .about-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: var(--spacing-44);
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: var(--spacing-99);
+    }
+
+    .about-text .lead {
+      font-family: var(--font-darius);
+      font-size: var(--text-heading-lg);
+      line-height: var(--leading-heading-lg);
+      font-weight: var(--font-weight-extralight);
+      color: var(--color-pure-white);
+      margin-bottom: var(--spacing-32);
     }
 
     .about-text p {
-      color: var(--color-ash);
+      color: var(--color-steel-gray);
       margin-bottom: var(--spacing-20);
-      font-size: var(--text-body);
-    }
-
-    .about-text p:first-child {
-      font-family: var(--font-pt-serif);
-      font-size: var(--text-subheading);
-      line-height: var(--leading-subheading);
-      color: var(--color-bone);
+      font-weight: var(--font-weight-light);
     }
 
     .about-stats {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1px;
-      background: var(--color-iron);
-      border: 1px solid var(--color-iron);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .stat-cell {
-      background: var(--surface-card);
-      padding: var(--spacing-28) var(--spacing-24);
-      transition: background 0.2s ease;
+      background: var(--surface-abyss-canvas);
+      padding: var(--spacing-32);
+      transition: background 0.25s ease;
     }
 
-    .stat-cell:hover { background: var(--surface-raised); }
+    .stat-cell:hover { background: #0c0c0e; }
 
     .stat-cell .num {
-      font-family: var(--font-pt-serif);
-      font-size: var(--text-heading-sm);
-      line-height: var(--leading-heading-sm);
-      color: var(--color-signal-lime);
-      display: block;
-    }
-
-    .stat-cell .num sup {
-      font-family: var(--font-jetbrains-mono);
-      font-size: var(--text-caption);
-      color: var(--color-fog);
-      margin-left: 2px;
+      font-family: var(--font-darius);
+      font-size: var(--text-heading);
+      line-height: 1;
+      font-weight: var(--font-weight-extralight);
+      background: var(--gradient-electric-cobalt);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
     }
 
     .stat-cell .lbl {
-      font-family: var(--font-jetbrains-mono);
+      display: block;
+      margin-top: var(--spacing-8);
       font-size: var(--text-caption);
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--color-fog);
-      margin-top: var(--spacing-8);
-      display: block;
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
     }
 
     /* ============ 技能 ============ */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: var(--spacing-24);
+      gap: var(--spacing-23);
     }
 
     .skill-card {
-      background: var(--surface-card);
-      border: 1px solid var(--color-iron);
+      background: #0c0c0e;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-cards);
       padding: var(--card-padding);
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
 
     .skill-card:hover {
-      background: var(--surface-raised);
-      border-color: var(--color-fog);
+      border-color: rgba(25, 84, 236, 0.5);
       transform: translateY(-4px);
     }
 
@@ -451,45 +437,50 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: var(--spacing-24);
-      padding-bottom: var(--spacing-16);
-      border-bottom: 1px solid var(--color-iron);
+      margin-bottom: var(--spacing-27);
+      padding-bottom: var(--spacing-20);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .skill-card h3 {
-      font-family: var(--font-pt-serif);
-      font-size: 17px;
-      color: var(--color-chalk);
-      font-weight: 400;
+      font-family: var(--font-darius);
+      font-size: var(--text-subheading);
+      font-weight: var(--font-weight-light);
+      color: var(--color-pure-white);
     }
 
-    .skill-card .head .mono-label { letter-spacing: 1px; }
+    .skill-card .head span {
+      font-size: var(--text-caption);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+    }
 
-    .skill-row { margin-bottom: var(--spacing-18); }
+    .skill-row { margin-bottom: var(--spacing-20); }
     .skill-row:last-child { margin-bottom: 0; }
 
     .skill-row .meta {
       display: flex;
       justify-content: space-between;
-      font-family: var(--font-jetbrains-mono);
-      font-size: var(--text-caption);
+      font-size: 12px;
       letter-spacing: 0.5px;
       margin-bottom: var(--spacing-8);
     }
 
-    .skill-row .meta .name { color: var(--color-pearl); }
-    .skill-row .meta .pct { color: var(--color-signal-lime); }
+    .skill-row .meta .name { color: var(--color-pure-white); font-weight: var(--font-weight-light); }
+    .skill-row .meta .pct { color: var(--color-steel-gray); }
 
     .skill-bar {
-      height: 4px;
-      background: var(--color-graphite);
+      height: 3px;
+      background: rgba(255, 255, 255, 0.1);
       overflow: hidden;
     }
 
     .skill-bar .fill {
       height: 100%;
       width: 0;
-      background: var(--color-signal-lime);
+      background: var(--gradient-electric-cobalt);
       transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
@@ -497,118 +488,129 @@
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-24);
+      gap: var(--spacing-23);
     }
 
     .project-card {
-      background: var(--surface-card);
-      border: 1px solid var(--color-iron);
+      background: #0c0c0e;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-cards);
       overflow: hidden;
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
     }
 
     .project-card:hover {
-      border-color: var(--color-fog);
-      background: var(--surface-raised);
+      border-color: rgba(25, 84, 236, 0.5);
       transform: translateY(-4px);
     }
 
     .project-thumb {
-      height: 170px;
+      height: 160px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 56px;
+      font-size: 48px;
       background:
-        linear-gradient(135deg, rgba(197, 255, 74, 0.08), transparent 60%),
-        var(--color-graphite);
-      border-bottom: 1px solid var(--color-iron);
+        linear-gradient(135deg, rgba(25, 84, 236, 0.16), transparent 55%),
+        #0a0a0b;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       position: relative;
     }
 
     .project-thumb .idx {
       position: absolute;
-      top: var(--spacing-16);
-      left: var(--spacing-16);
-      font-family: var(--font-jetbrains-mono);
+      top: var(--spacing-20);
+      left: var(--spacing-20);
       font-size: var(--text-caption);
-      color: var(--color-signal-lime);
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+      text-transform: uppercase;
     }
 
     .project-body {
-      padding: var(--spacing-24);
+      padding: var(--spacing-32);
       display: flex;
       flex-direction: column;
       flex: 1;
     }
 
     .project-body h3 {
-      font-family: var(--font-pt-serif);
+      font-family: var(--font-darius);
       font-size: var(--text-subheading);
-      color: var(--color-chalk);
-      font-weight: 400;
-      margin-bottom: var(--spacing-10);
+      font-weight: var(--font-weight-light);
+      color: var(--color-pure-white);
+      margin-bottom: var(--spacing-9);
     }
 
     .project-body p {
-      color: var(--color-ash);
-      font-size: 13px;
+      color: var(--color-steel-gray);
+      font-size: 14px;
+      font-weight: var(--font-weight-light);
       flex: 1;
-      margin-bottom: var(--spacing-16);
+      margin-bottom: var(--spacing-20);
     }
 
     .project-tags {
       display: flex;
       flex-wrap: wrap;
-      gap: var(--spacing-6);
+      gap: var(--spacing-8);
       margin-bottom: var(--spacing-20);
     }
 
     .tag {
-      font-family: var(--font-jetbrains-mono);
       font-size: var(--text-caption);
-      letter-spacing: 0.5px;
-      color: var(--color-signal-lime);
-      background: rgba(197, 255, 74, 0.08);
-      border: 1px solid rgba(197, 255, 74, 0.22);
-      border-radius: var(--radius-tags);
-      padding: 4px 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-pure-white);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-badges);
+      padding: 5px 10px;
+      font-weight: var(--font-weight-medium);
     }
 
     .project-links {
       display: flex;
       gap: var(--spacing-20);
-      font-family: var(--font-jetbrains-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 1px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
+      font-weight: var(--font-weight-medium);
     }
 
-    .project-links a { color: var(--color-bone); transition: color 0.2s ease; }
-    .project-links a:hover { color: var(--color-signal-lime); }
+    .project-links a {
+      color: var(--color-pure-white);
+      border-bottom: 1px solid rgba(25, 84, 236, 0.5);
+      padding-bottom: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .project-links a:hover {
+      color: var(--color-electric-cobalt);
+      border-color: var(--color-electric-cobalt);
+    }
 
     /* ============ 经历 ============ */
     .timeline {
       position: relative;
-      max-width: 760px;
+      max-width: 720px;
     }
 
     .timeline::before {
       content: "";
       position: absolute;
-      left: 7px; top: 0; bottom: 0;
+      left: 0; top: 0; bottom: 0;
       width: 1px;
-      background: var(--color-iron);
+      background: rgba(255, 255, 255, 0.12);
     }
 
     .timeline-item {
       position: relative;
-      padding-left: var(--spacing-44);
-      padding-bottom: var(--spacing-44);
+      padding-left: var(--spacing-39);
+      padding-bottom: var(--spacing-59);
     }
 
     .timeline-item:last-child { padding-bottom: 0; }
@@ -616,151 +618,158 @@
     .timeline-item::before {
       content: "";
       position: absolute;
-      left: 0; top: 5px;
-      width: 15px; height: 15px;
-      background: var(--surface-canvas);
-      border: 1px solid var(--color-signal-lime);
-      box-shadow: var(--shadow-sm);
+      left: -4px; top: 6px;
+      width: 9px; height: 9px;
+      background: var(--gradient-electric-cobalt);
+      box-shadow: 0 0 14px rgba(25, 84, 236, 0.8);
     }
 
     .timeline-item .time {
-      font-family: var(--font-jetbrains-mono);
       font-size: var(--text-caption);
-      letter-spacing: 2px;
-      color: var(--color-signal-lime);
+      letter-spacing: 2.5px;
       text-transform: uppercase;
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
       margin-bottom: var(--spacing-8);
       display: block;
     }
 
     .timeline-item h3 {
-      font-family: var(--font-pt-serif);
+      font-family: var(--font-darius);
       font-size: var(--text-subheading);
-      color: var(--color-chalk);
-      font-weight: 400;
-      margin-bottom: var(--spacing-6);
+      font-weight: var(--font-weight-light);
+      color: var(--color-pure-white);
+      margin-bottom: var(--spacing-8);
     }
 
     .timeline-item .org {
-      font-family: var(--font-jetbrains-mono);
-      font-size: var(--text-caption);
-      color: var(--color-smoke);
-      letter-spacing: 0.5px;
-      margin-bottom: var(--spacing-12);
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--color-electric-cobalt);
+      margin-bottom: var(--spacing-20);
       display: block;
+      font-weight: var(--font-weight-medium);
     }
 
-    .timeline-item p { color: var(--color-ash); font-size: 13px; }
+    .timeline-item p {
+      color: var(--color-steel-gray);
+      font-size: 14px;
+      font-weight: var(--font-weight-light);
+    }
 
     /* ============ 联系 ============ */
     .contact-wrap {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
-      gap: var(--spacing-44);
+      grid-template-columns: 1fr 1.25fr;
+      gap: var(--spacing-99);
       align-items: start;
     }
 
     .contact-info h3 {
-      font-family: var(--font-pt-serif);
-      font-size: var(--text-heading-sm);
-      color: var(--color-chalk);
-      font-weight: 400;
-      margin-bottom: var(--spacing-16);
+      font-family: var(--font-darius);
+      font-size: var(--text-heading-lg);
+      line-height: var(--leading-heading-lg);
+      font-weight: var(--font-weight-extralight);
+      color: var(--color-pure-white);
+      margin-bottom: var(--spacing-20);
     }
 
     .contact-info > p {
-      color: var(--color-ash);
-      margin-bottom: var(--spacing-32);
+      color: var(--color-steel-gray);
+      margin-bottom: var(--spacing-39);
+      font-weight: var(--font-weight-light);
     }
 
     .contact-list {
       display: flex;
       flex-direction: column;
-      border-top: 1px solid var(--color-iron);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .contact-item {
       display: flex;
       align-items: center;
-      gap: var(--spacing-16);
-      padding: var(--spacing-16) 0;
-      border-bottom: 1px solid var(--color-iron);
-      font-size: 13px;
+      gap: var(--spacing-20);
+      padding: var(--spacing-20) 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 14px;
     }
 
     .contact-item .icon {
-      width: 40px; height: 40px;
+      width: 44px; height: 44px;
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      border: 1px solid var(--color-iron);
-      border-radius: var(--radius-logotiles);
-      background: var(--surface-card);
-      font-size: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-links);
+      background: #0c0c0e;
+      font-size: 18px;
     }
 
     .contact-item .lbl {
-      font-family: var(--font-jetbrains-mono);
       font-size: var(--text-caption);
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--color-fog);
+      color: var(--color-steel-gray);
       display: block;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
+      font-weight: var(--font-weight-medium);
     }
 
-    .contact-item .val { color: var(--color-bone); }
+    .contact-item .val { color: var(--color-pure-white); font-weight: var(--font-weight-light); }
 
     .contact-form {
-      background: var(--surface-card);
-      border: 1px solid var(--color-iron);
+      background: #0c0c0e;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: var(--radius-cards);
-      padding: var(--card-padding);
+      padding: var(--spacing-39);
     }
 
-    .form-group { margin-bottom: var(--spacing-20); }
+    .form-group { margin-bottom: var(--spacing-23); }
 
     .form-group label {
       display: block;
-      font-family: var(--font-jetbrains-mono);
       font-size: var(--text-caption);
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--color-fog);
-      margin-bottom: var(--spacing-8);
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
+      margin-bottom: var(--spacing-9);
     }
 
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: var(--spacing-14) var(--spacing-16);
-      background: var(--color-void-black);
-      border: 1px solid var(--color-iron);
-      border-radius: var(--radius-buttons);
-      color: var(--color-chalk);
-      font-family: var(--font-inter-tight);
-      font-size: var(--text-body);
-      transition: border-color 0.2s ease;
+      padding: var(--spacing-20);
+      background: var(--color-carbon);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      color: var(--color-pure-white);
+      font-family: var(--font-graphik);
+      font-size: 15px;
+      font-weight: var(--font-weight-light);
+      transition: border-color 0.25s ease;
       resize: vertical;
     }
 
     .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--color-fog); }
+    .form-group textarea::placeholder { color: var(--color-steel-gray); }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--color-signal-lime);
-      box-shadow: var(--shadow-sm);
+      border-color: var(--color-electric-cobalt);
+      box-shadow: 0 0 0 3px rgba(25, 84, 236, 0.18);
     }
 
     .form-group textarea { min-height: 130px; }
 
     /* ============ 页脚 ============ */
     footer {
-      border-top: 1px solid var(--color-iron);
-      padding: var(--spacing-32) 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: var(--spacing-39) 0;
     }
 
     .foot-inner {
@@ -768,60 +777,65 @@
       flex-wrap: wrap;
       justify-content: space-between;
       gap: var(--spacing-16);
-      font-family: var(--font-jetbrains-mono);
       font-size: var(--text-caption);
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: var(--color-fog);
+      color: var(--color-steel-gray);
+      font-weight: var(--font-weight-medium);
     }
 
-    .foot-inner b { color: var(--color-signal-lime); font-weight: var(--font-weight-regular); }
+    .foot-inner b {
+      color: var(--color-pure-white);
+      font-weight: var(--font-weight-regular);
+    }
 
     /* ============ 揭示动画 ============ */
     .reveal {
       opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+      transform: translateY(26px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     /* ============ 响应式 ============ */
     @media (max-width: 900px) {
-      .hero-title { font-size: var(--text-heading-lg); line-height: var(--leading-heading-lg); }
-      .about-grid, .contact-wrap { grid-template-columns: 1fr; }
+      .hero-title { font-size: var(--text-heading-lg); }
+      .about-grid, .contact-wrap { grid-template-columns: 1fr; gap: var(--spacing-59); }
       .skills-grid { grid-template-columns: 1fr 1fr; }
       .projects-grid { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 640px) {
-      section { padding: 72px 0; }
+      section { padding: var(--spacing-99) 0; }
       .container { padding: 0 var(--spacing-20); }
 
       .nav-links {
         position: fixed;
         top: 0; right: -100%;
-        width: 72%;
+        width: 75%;
         height: 100vh;
-        background: rgba(6, 6, 6, 0.98);
+        background: rgba(7, 7, 8, 0.98);
         flex-direction: column;
         justify-content: center;
-        gap: var(--spacing-28);
+        gap: var(--spacing-32);
         transition: right 0.3s ease;
-        border-left: 1px solid var(--color-iron);
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
       }
       .nav-links.open { right: 0; }
       .nav-links a { font-size: 12px; }
       .hamburger { display: flex; z-index: 1001; }
-      .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+      .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
       .hamburger.active span:nth-child(2) { opacity: 0; }
-      .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+      .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-      .hero-title { font-size: 48px; letter-spacing: -1px; }
+      .hero-title { font-size: 46px; }
+      .section-head h2 { font-size: 34px; }
+      .about-text .lead { font-size: 30px; }
       .skills-grid { grid-template-columns: 1fr; }
       .about-stats { grid-template-columns: 1fr 1fr; }
-      .section-head h2 { font-size: var(--text-heading-sm); }
-      .hero-top { flex-direction: column; gap: var(--spacing-8); }
+      .hero-top { flex-direction: column; align-items: flex-start; gap: var(--spacing-8); }
+      .contact-info h3 { font-size: 34px; }
     }
   </style>
 </head>
@@ -831,16 +845,14 @@
   <header>
     <div class="container">
       <nav>
-        <a href="#home" class="logo">
-          <span class="dot"></span> WYZ — PORTFOLIO
-        </a>
+        <a href="#home" class="logo"><span class="dot"></span>WYZ — PORTFOLIO</a>
         <ul class="nav-links" id="navLinks">
-          <li><a href="#home"><span class="idx">01</span>首页</a></li>
-          <li><a href="#about"><span class="idx">02</span>关于</a></li>
-          <li><a href="#skills"><span class="idx">03</span>技能</a></li>
-          <li><a href="#projects"><span class="idx">04</span>项目</a></li>
-          <li><a href="#experience"><span class="idx">05</span>经历</a></li>
-          <li><a href="#contact"><span class="idx">06</span>联系</a></li>
+          <li><a href="#home">首页</a></li>
+          <li><a href="#about">关于</a></li>
+          <li><a href="#skills">技能</a></li>
+          <li><a href="#projects">项目</a></li>
+          <li><a href="#experience">经历</a></li>
+          <li><a href="#contact">联系</a></li>
         </ul>
         <button class="hamburger" id="hamburger" aria-label="菜单">
           <span></span><span></span><span></span>
@@ -851,24 +863,22 @@
 
   <!-- ============ Hero ============ -->
   <section class="hero" id="home">
-    <div class="container hero-inner">
+    <div class="container">
       <div class="hero-top">
-        <span class="status"><span class="pulse"></span> AVAILABLE FOR WORK</span>
-        <span>© 2024 / PORTFOLIO</span>
+        <span class="status"><span class="pulse"></span>AVAILABLE FOR WORK</span>
+        <span>PORTFOLIO — 2024</span>
       </div>
 
       <h1 class="hero-title">
         温曜榛<br />
-        <span class="accent">创造有意义的</span><br />数字体验
+        <span class="grad">构建未来的</span><br />数字体验
       </h1>
 
-      <p class="hero-sub">
-        全栈开发者 · <strong>Full-Stack Developer</strong>
-      </p>
+      <p class="hero-sub">全栈开发者 · Full-Stack Developer</p>
 
       <p class="hero-desc">
-        我专注于构建高性能、优雅的 Web 应用，将复杂的问题转化为简洁的解决方案。
-        从代码架构到交互细节，我追求每一处的精准与克制。
+        专注于高性能、优雅的 Web 应用，将复杂问题转化为简洁解决方案。
+        从代码架构到交互细节，追求每一处的精准与克制。
       </p>
 
       <div class="btn-group">
@@ -880,7 +890,7 @@
         <span>BASE <b>中国 · 北京</b></span>
         <span>FOCUS <b>Web / 全栈</b></span>
         <span>STACK <b>TS · Node · React</b></span>
-        <span>STATUS <b style="color: var(--color-signal-lime);">OPEN</b></span>
+        <span>STATUS <b class="grad-text">OPEN</b></span>
       </div>
     </div>
   </section>
@@ -889,15 +899,13 @@
   <section id="about">
     <div class="container">
       <div class="section-head reveal">
-        <span class="mono-label">01 / About</span>
-        <h2>关于<em>我</em></h2>
+        <span class="eyebrow"><span class="line"></span>ABOUT</span>
+        <h2>关于<span class="grad">我</span></h2>
+        <p>认识一下我是谁，我在做什么。</p>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
-          <p>
-            你好，我是温曜榛。一名热爱技术与设计、相信「少即是多」的全栈开发者。
-            我享受在代码与美学之间寻找平衡，打造真正有价值的产品。
-          </p>
+          <p class="lead">你好，我是温曜榛。<br />一名热爱技术与设计、相信「少即是多」的全栈开发者。</p>
           <p>
             拥有计算机科学背景，过去几年专注 Web 开发，积累了从概念设计到产品上线的完整经验。
             我关注工程效率、代码质量与用户体验，也乐于探索 AI、开源等前沿技术。
@@ -909,19 +917,19 @@
         </div>
         <div class="about-stats reveal">
           <div class="stat-cell">
-            <span class="num" data-count="5">0<sup>+</sup></span>
+            <span class="num" data-count="5">0</span>
             <span class="lbl">Years Experience</span>
           </div>
           <div class="stat-cell">
-            <span class="num" data-count="40">0<sup>+</sup></span>
+            <span class="num" data-count="40">0</span>
             <span class="lbl">Projects Done</span>
           </div>
           <div class="stat-cell">
-            <span class="num" data-count="25">0<sup>+</sup></span>
+            <span class="num" data-count="25">0</span>
             <span class="lbl">Happy Clients</span>
           </div>
           <div class="stat-cell">
-            <span class="num" data-count="10">0<sup>+</sup></span>
+            <span class="num" data-count="10">0</span>
             <span class="lbl">Awards Won</span>
           </div>
         </div>
@@ -933,14 +941,15 @@
   <section id="skills">
     <div class="container">
       <div class="section-head reveal">
-        <span class="mono-label">02 / Skills</span>
-        <h2>技术<em>栈</em></h2>
+        <span class="eyebrow"><span class="line"></span>SKILLS</span>
+        <h2>技术<span class="grad">栈</span></h2>
+        <p>我在日常工作中使用的核心技术。</p>
       </div>
       <div class="skills-grid">
         <div class="skill-card reveal">
           <div class="head">
             <h3>前端开发</h3>
-            <span class="mono-label">FRONT-END</span>
+            <span>FRONT-END</span>
           </div>
           <div class="skill-row">
             <div class="meta"><span class="name">HTML / CSS</span><span class="pct">95%</span></div>
@@ -958,7 +967,7 @@
         <div class="skill-card reveal">
           <div class="head">
             <h3>后端开发</h3>
-            <span class="mono-label">BACK-END</span>
+            <span>BACK-END</span>
           </div>
           <div class="skill-row">
             <div class="meta"><span class="name">Node.js / Python</span><span class="pct">85%</span></div>
@@ -976,7 +985,7 @@
         <div class="skill-card reveal">
           <div class="head">
             <h3>工具与其他</h3>
-            <span class="mono-label">TOOLING</span>
+            <span>TOOLING</span>
           </div>
           <div class="skill-row">
             <div class="meta"><span class="name">Git / Docker</span><span class="pct">86%</span></div>
@@ -999,8 +1008,9 @@
   <section id="projects">
     <div class="container">
       <div class="section-head reveal">
-        <span class="mono-label">03 / Projects</span>
-        <h2>精选<em>项目</em></h2>
+        <span class="eyebrow"><span class="line"></span>PROJECTS</span>
+        <h2>精选<span class="grad">项目</span></h2>
+        <p>我参与和完成的一些代表作品。</p>
       </div>
       <div class="projects-grid">
         <div class="project-card reveal">
@@ -1107,8 +1117,9 @@
   <section id="experience">
     <div class="container">
       <div class="section-head reveal">
-        <span class="mono-label">04 / Experience</span>
-        <h2>工作<em>经历</em></h2>
+        <span class="eyebrow"><span class="line"></span>EXPERIENCE</span>
+        <h2>工作<span class="grad">经历</span></h2>
+        <p>我的职业成长之路。</p>
       </div>
       <div class="timeline">
         <div class="timeline-item reveal">
@@ -1137,8 +1148,9 @@
   <section id="contact">
     <div class="container">
       <div class="section-head reveal">
-        <span class="mono-label">05 / Contact</span>
-        <h2>联系<em>我</em></h2>
+        <span class="eyebrow"><span class="line"></span>CONTACT</span>
+        <h2>联系<span class="grad">我</span></h2>
+        <p>有想法或合作？欢迎随时联系。</p>
       </div>
       <div class="contact-wrap">
         <div class="contact-info reveal">
@@ -1191,8 +1203,8 @@
   <footer>
     <div class="container foot-inner">
       <span>© 2024 <b>温曜榛</b> · All rights reserved</span>
-      <span>Design & Build with <b>♥</b></span>
-      <span>WYZ — PORTFOLIO <b>V1.0</b></span>
+      <span>Design & Build with <b class="grad-text">♥</b></span>
+      <span>WYZ — PORTFOLIO <b class="grad-text">V1.0</b></span>
     </div>
   </footer>
 

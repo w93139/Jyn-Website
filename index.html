@@ -1,1360 +1,635 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="温曜榛 — 个人作品集与网站" />
-  <title>温曜榛 · Portfolio</title>
-
-  <!-- Inter 字体（免费） -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a10">
+  <meta name="description" content="温曜榛，AI 产品经理。围绕真实经营场景，推进在线 AI 剧本杀、创作 Agent 与内容增长，从需求定义到原型验证与持续迭代。">
+  <title>温曜榛 — AI 产品经理 · 作品与实践</title>
   <style>
     :root {
-      /* Colors */
-      --color-void-black: #000000;
-      --color-graphite-hairline: #292d30;
-      --color-white: #ffffff;
-      --color-bone-white: #f0f0f0;
-      --color-ash-gray: #a1a4a5;
-      --color-smoke-gray: #abafb4;
-      --color-iron: #6e727a;
-      --color-charcoal: #464a4d;
-      --color-iris-violet: #9281f7;
-      --gradient-iris-violet: linear-gradient(to right bottom in oklab, rgb(146, 129, 247) 0%, rgb(154, 84, 220) 100%);
-      --gradient-iris-violet-fallback: linear-gradient(135deg, rgb(146, 129, 247) 0%, rgb(154, 84, 220) 100%);
-      --color-iris-violet-glow: #baa7ff;
-      --color-signal-blue: #3b9eff;
-      --color-sky-blue: #70b8ff;
-      --color-pulse-green: #3ad389;
-      --color-alarm-red: #ff9592;
-      --color-crimson: #ff6465;
-      --color-amber: #ffca16;
-      --color-amber-glow: #ffd60a;
-      --color-surface-gradient: #0b0e14;
-      --gradient-surface-gradient: linear-gradient(rgb(27, 27, 27), rgb(3, 3, 3));
-
-      /* Typography — Font Families */
-      --font-inter: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-domaine: 'Domaine', ui-serif, Georgia, "Times New Roman", serif;
-      --font-abc-favorit: 'aBC Favorit', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-commit-mono: 'Commit Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      --font-helvetica: 'Helvetica', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      --font-apple-system: '-apple-system', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-      /* Typography — Scale */
-      --text-caption: 12px;
-      --leading-caption: 1.33;
-      --text-body-sm: 14px;
-      --leading-body-sm: 1.43;
-      --text-body: 16px;
-      --leading-body: 1.5;
-      --text-subheading: 20px;
-      --leading-subheading: 1;
-      --text-heading-sm: 24px;
-      --leading-heading-sm: 1.5;
-      --text-heading: 56px;
-      --leading-heading: 1.2;
-      --tracking-heading: -2.8px;
-      --text-heading-lg: 77px;
-      --leading-heading-lg: 1;
-      --tracking-heading-lg: -0.77px;
-      --text-display: 96px;
-      --leading-display: 1;
-      --tracking-display: -0.96px;
-
-      /* Typography — Weights */
-      --font-weight-regular: 400;
-      --font-weight-medium: 500;
-      --font-weight-semibold: 600;
-      --font-weight-bold: 700;
-
-      /* Spacing */
-      --spacing-unit: 4px;
-      --spacing-4: 4px;
-      --spacing-8: 8px;
-      --spacing-12: 12px;
-      --spacing-16: 16px;
-      --spacing-20: 20px;
-      --spacing-24: 24px;
-      --spacing-28: 28px;
-      --spacing-32: 32px;
-      --spacing-40: 40px;
-      --spacing-48: 48px;
-      --spacing-64: 64px;
-      --spacing-80: 80px;
-      --spacing-96: 96px;
-      --spacing-104: 104px;
-      --spacing-144: 144px;
-
-      /* Layout */
-      --page-max-width: 1200px;
-      --section-gap: 96px;
-      --card-padding: 32px;
-      --element-gap: 16px;
-
-      /* Border Radius */
-      --radius-md: 6px;
-      --radius-lg: 10px;
-      --radius-2xl: 16px;
-      --radius-3xl: 24px;
-
-      /* Named Radii */
-      --radius-cards: 16px;
-      --radius-badges: 6px;
-      --radius-inputs: 6px;
-      --radius-buttons: 6px;
-      --radius-large-panels: 24px;
-
-      /* Shadows */
-      --shadow-subtle: rgba(176, 199, 217, 0.145) 0px 0px 0px 1px;
-      --shadow-subtle-2: rgb(0, 0, 0) 0px 0px 0px 8px;
-      --shadow-subtle-3: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
-
-      /* Surfaces */
-      --surface-void: #000000;
-      --surface-graphite: #292d30;
-      --surface-surface-lift: #0b0e14;
-      --surface-backdrop-blur: #000000f2;
+      --paper: #090a10;
+      --ink: #eceef7;
+      --muted: #a0a4b7;
+      --line: #292d3d;
+      --accent: #b2b9ff;
+      --accent-soft: #141627;
+      --green-soft: #101f27;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
     }
-
-    /* ============ 基础 ============ */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--font-inter);
-      font-size: var(--text-body);
-      line-height: var(--leading-body);
-      background: var(--surface-void);
-      color: var(--color-ash-gray);
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 108px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, h4, p, figure { margin: 0; }
     a { color: inherit; text-decoration: none; }
-    ul { list-style: none; }
-    img { max-width: 100%; display: block; }
-
-    ::selection {
-      background: var(--color-iris-violet);
-      color: var(--color-white);
+    button { font: inherit; }
+    button, a, summary { -webkit-tap-highlight-color: transparent; }
+    a, button, summary { touch-action: manipulation; }
+    a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; }
+    ::selection { background: #49477b; color: #eceef7; }
+    .wrap { width: min(1200px, calc(100% - 96px)); margin-inline: auto; }
+    .mono { font-family: var(--mono); font-size: 11px; letter-spacing: .075em; }
+    .muted { color: var(--muted); }
+    .serif { font-family: var(--serif); font-weight: 500; }
+    .skip { position: fixed; z-index: 100; top: 12px; left: 12px; padding: 12px 18px; background: #d9ddff; color: #111320; transform: translateY(-150%); }
+    .skip:focus { transform: translateY(0); }
+    .header { position: sticky; top: 0; z-index: 20; background: rgba(9,10,16,.88); backdrop-filter: blur(20px); border-bottom: 1px solid var(--line); }
+    .header-inner { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
+    .nav { display: flex; gap: 32px; align-items: center; }
+    .nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; color: var(--muted); transition: color .18s; }
+    .nav a:hover, .nav a[aria-current="location"] { color: var(--accent); }
+    .nav .nav-contact { color: var(--ink); gap: 12px; }
+    .menu-toggle { display: none; color: var(--ink); border: 1px solid var(--line); background: transparent; padding: 8px 14px; min-height: 44px; font-size: 13px; cursor: pointer; }
+    .hero { padding-top: 70px; }
+    .hero-topline { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding-bottom: 35px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(290px, 1fr); gap: 72px; align-items: center; }
+    .identity { display: flex; align-items: center; flex-wrap: wrap; gap: 11px; margin-bottom: 22px; font-size: 15px; }
+    .identity strong { font-weight: 600; }
+    .identity .slash { color: #686e87; }
+    .hero h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(40px, 4.8vw, 66px); line-height: 1.4; letter-spacing: -.04em; }
+    .hero h1 em { color: var(--accent); font-style: normal; }
+    .hero-copy { max-width: 535px; margin-top: 26px; color: var(--muted); font-size: 15px; line-height: 1.95; }
+    .hero-actions { margin-top: 32px; display: flex; gap: 25px; align-items: center; flex-wrap: wrap; }
+    .button { display: inline-flex; justify-content: space-between; align-items: center; gap: 34px; padding: 12px 20px; min-height: 48px; background: var(--ink); border: 1px solid var(--ink); color: var(--paper); font-size: 13px; transition: background .18s, border-color .18s; }
+    .button:hover { background: var(--accent); border-color: var(--accent); }
+    .text-link { display: inline-flex; gap: 18px; align-items: center; min-height: 44px; font-size: 13px; border-bottom: 1px solid var(--line); transition: border-color .18s; }
+    .text-link:hover { border-color: var(--accent); }
+    .hero-foot { margin-top: 62px; display: flex; justify-content: space-between; align-items: center; gap: 24px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0; }
+    .practice-list { display: flex; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 12px; }
+    .practice-list .mono { color: var(--muted); margin-right: 8px; }
+    .practice-list .divide { width: 1px; height: 12px; background: var(--line); }
+    .scroll-cue { font-size: 18px; color: var(--accent); }
+    .section { padding-block: 90px; }
+    .section-heading { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: start; margin-bottom: 42px; }
+    .section-label { display: flex; gap: 16px; align-items: center; color: var(--muted); padding-top: 9px; font-size: 12px; }
+    .section-label .mono { color: var(--accent); }
+    .section-title { font-family: var(--serif); font-weight: 500; font-size: clamp(30px, 3vw, 40px); line-height: 1.55; letter-spacing: -.025em; }
+    .section-heading .intro { margin-top: 13px; max-width: 520px; font-size: 14px; color: var(--muted); }
+    .project { border-top: 1px solid var(--line); }
+    .project-meta { display: flex; justify-content: space-between; align-items: center; gap: 16px; margin-bottom: 18px; font: 10px/1.6 var(--mono); letter-spacing: .055em; color: var(--muted); }
+    .project-kind { color: var(--accent); }
+    .feature { display: grid; grid-template-columns: 1.05fr 1fr; padding-top: 32px; gap: 52px; }
+    .project h3 { font-size: 27px; font-weight: 500; letter-spacing: -.02em; line-height: 1.5; }
+    .project-lead { color: var(--muted); font-size: 14px; line-height: 1.9; margin-top: 15px; }
+    .role { font-size: 12px; color: var(--muted); margin-top: 20px; }
+    .role strong { font-weight: 500; color: var(--ink); margin-right: 12px; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 19px; }
+    .tag { border: 1px solid var(--line); padding: 3px 9px; font-size: 10px; line-height: 1.5; color: var(--muted); }
+    .diagram-caption { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: #abb0d3; font-size: 11px; }
+    .diagram-caption .mono { font-size: 9px; }
+    .metric-row { display: grid; grid-template-columns: 1fr 1fr; margin-top: 27px; gap: 20px; }
+    .metric-value { display: flex; align-items: baseline; gap: 9px; font: 32px/1.2 Georgia, serif; letter-spacing: -.03em; }
+    .metric-value .before { color: #8f96ab; }
+    .metric-value .arrow { color: #8f96ab; font: 16px var(--sans); }
+    .metric-value .after { color: var(--accent); }
+    .metric-value small { font: 11px var(--sans); color: var(--muted); letter-spacing: 0; }
+    .metric-label { display: block; font-size: 11px; color: var(--muted); margin-top: 7px; }
+    .metric-scope { margin-top: 15px; font-size: 10px; line-height: 1.85; color: var(--muted); }
+    .case-details { margin-top: 23px; border-top: 1px solid var(--line); }
+    .case-details summary { display: flex; align-items: center; justify-content: space-between; list-style: none; cursor: pointer; min-height: 52px; gap: 20px; font-size: 12px; }
+    .case-details summary::-webkit-details-marker { display: none; }
+    .case-details summary::after { content: "+"; color: var(--accent); font: 23px/1 var(--sans); }
+    .case-details[open] summary::after { content: "−"; }
+    .case-details summary:hover { color: var(--accent); }
+    .case-details[open] summary { margin-bottom: 6px; }
+    .detail-body { padding-bottom: 22px; }
+    .detail-item { margin-top: 16px; }
+    .detail-item h4 { font-size: 12px; font-weight: 600; margin-bottom: 5px; }
+    .detail-item p { font-size: 12px; line-height: 1.95; color: var(--muted); }
+    .secondary-projects { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; margin-top: 56px; }
+    .secondary-projects .project { padding-top: 25px; display: flex; flex-direction: column; }
+    .secondary-projects h3 { font-size: 24px; }
+    .secondary-projects .project-lead { min-height: 80px; }
+    .secondary-projects .case-details { margin-top: auto; }
+    .small-visual { margin-top: 24px; margin-bottom: 24px; min-height: 147px; padding: 20px 23px; }
+    .agent-visual { background: var(--green-soft); border: 1px solid #293d4d; }
+    .agent-visual .diagram-caption { color: #a5c8d9; }
+    .agent-flow { display: flex; align-items: center; justify-content: space-between; gap: 9px; margin-top: 25px; font-size: 12px; }
+    .agent-flow .arrow { color: #7192ae; }
+    .agent-flow span:not(.arrow) { border-bottom: 1px solid #45697e; padding-bottom: 6px; }
+    .growth-visual { background: #1a1626; border: 1px solid #40344a; }
+    .growth-visual .diagram-caption { color: #c5b0cf; }
+    .growth-flow { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 20px; font-size: 12px; }
+    .growth-flow span { text-align: center; }
+    .growth-flow i { font-style: normal; color: #b09dc6; font-size: 15px; }
+    .growth-return { height: 10px; width: calc(100% - 40px); border: 1px solid #594562; border-top: 0; margin: 12px auto 0; }
+    .secondary-result { display: flex; align-items: baseline; gap: 15px; flex-wrap: wrap; padding-bottom: 17px; }
+    .secondary-result .metric-value { font-size: 30px; }
+    .secondary-result p { font-size: 11px; color: var(--muted); }
+    .secondary-projects .metric-scope { margin: 0 0 20px; }
+    .method { background: var(--ink); color: var(--paper); padding: 74px 0 80px; }
+    .method .section-label { color: #a7abc0; }
+    .method .section-label .mono { color: #babaff; }
+    .method .section-heading { margin-bottom: 34px; }
+    .method .section-title { font-size: clamp(31px, 3.3vw, 44px); }
+    .method .section-title em { color: #babaff; font-style: normal; }
+    .method-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; border-top: 1px solid #303348; padding-top: 30px; }
+    .method-number { font: 11px var(--mono); color: #979eb9; }
+    .method-grid h3 { font-size: 18px; font-weight: 500; margin: 17px 0 10px; }
+    .method-grid p { font-size: 13px; color: #aeb3c8; line-height: 1.95; }
+    .method-tags { margin-top: 19px; color: #babaff; font: 10px/1.8 var(--mono); }
+    .experience { padding-bottom: 80px; }
+    .career-list { border-top: 1px solid var(--line); }
+    .career-row { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .career-time { font: 11px/1.8 var(--mono); color: var(--muted); padding-top: 5px; }
+    .career-title { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
+    .career-title h3 { font-size: 17px; font-weight: 500; }
+    .career-title span { font-size: 12px; color: var(--muted); text-align: right; }
+    .career-row p { font-size: 13px; color: var(--muted); margin-top: 9px; max-width: 650px; line-height: 1.9; }
+    .career-row:first-child h3 { color: var(--accent); }
+    .contact { border-top: 1px solid var(--line); padding: 62px 0 52px; }
+    .copy-button { border: 0; background: none; color: var(--muted); padding: 0; cursor: pointer; }
+    .copy-button:hover { color: var(--accent); }
+    .copy-status { min-height: 22px; font-size: 11px; color: var(--accent); }
+    .footer { padding: 20px 0; border-top: 1px solid var(--line); }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 10px; color: var(--muted); }
+    .footer-inner .mono { font-size: 9px; }
+    .back-top { display: inline-flex; gap: 14px; align-items: center; min-height: 44px; }
+    @media (min-width: 1500px) { .hero { padding-top: 82px; } .hero-grid { gap: 100px; } }
+    @media (max-width: 1000px) {
+      .wrap { width: calc(100% - 64px); }
+      .hero-grid { grid-template-columns: minmax(0, 1.45fr) minmax(245px, 1fr); gap: 35px; }
+      .hero h1 { font-size: 45px; }
+      .hero-copy { font-size: 14px; }
+      .feature { gap: 32px; }
+      .secondary-projects { gap: 32px; }
+      .career-title { align-items: flex-start; }
+      .career-title span { flex-shrink: 0; }
+    }
+    @media (max-width: 760px) {
+      html { scroll-padding-top: 96px; }
+      .wrap { width: calc(100% - 40px); }
+      .header-inner { min-height: 70px; flex-wrap: wrap; gap: 0 20px; padding-block: 10px; }
+      .nav { width: 100%; gap: 18px; border-top: 1px solid var(--line); padding-top: 7px; margin-top: 8px; justify-content: space-between; }
+      .nav a { font-size: 12px; }
+      .js .menu-toggle { display: inline-flex; align-items: center; gap: 12px; }
+      .js .nav { display: none; }
+      .js .nav.is-open { display: flex; }
+      .hero { padding-top: 36px; }
+      .hero-topline { padding-bottom: 29px; }
+      .hero-topline .mono { font-size: 9px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 42px; }
+      .identity { margin-bottom: 17px; font-size: 13px; }
+      .hero h1 { font-size: clamp(36px, 7.6vw, 54px); line-height: 1.42; }
+      .hero-copy { margin-top: 19px; max-width: 550px; font-size: 14px; }
+      .hero-actions { margin-top: 24px; }
+      .hero-foot { margin-top: 35px; padding: 18px 0; }
+      .practice-list { gap: 8px 16px; font-size: 10px; }
+      .practice-list .mono { flex-basis: 100%; font-size: 9px; }
+      .practice-list .divide { display: none; }
+      .section { padding-block: 58px; }
+      .section-heading { grid-template-columns: 1fr; gap: 17px; margin-bottom: 30px; }
+      .section-label { padding-top: 0; font-size: 11px; }
+      .section-title { font-size: 31px; }
+      .section-heading .intro { font-size: 13px; margin-top: 12px; }
+      .feature { grid-template-columns: 1fr; gap: 26px; padding-top: 23px; }
+      .project h3 { font-size: 25px; }
+      .project-meta { font-size: 9px; margin-bottom: 14px; }
+      .project-lead { font-size: 13px; }
+      .metric-row { margin-top: 23px; }
+      .metric-scope { font-size: 11px; }
+      .secondary-projects { grid-template-columns: 1fr; gap: 28px; margin-top: 35px; }
+      .secondary-projects .project-lead { min-height: 0; }
+      .secondary-projects h3 { font-size: 23px; }
+      .small-visual { min-height: 143px; margin-top: 20px; }
+      .secondary-projects .metric-scope { margin-bottom: 18px; }
+      .method { padding-block: 52px; }
+      .method .section-heading { margin-bottom: 27px; }
+      .method .section-title { font-size: 32px; }
+      .method-grid { grid-template-columns: 1fr; gap: 26px; padding-top: 25px; }
+      .method-step { display: grid; grid-template-columns: 30px 1fr; column-gap: 13px; }
+      .method-number { grid-row: 1 / 4; padding-top: 6px; }
+      .method-grid h3 { margin: 0 0 9px; font-size: 17px; }
+      .method-tags { margin-top: 11px; }
+      .career-row { grid-template-columns: 1fr; gap: 9px; padding: 23px 0; }
+      .career-title { gap: 12px; }
+      .career-title h3 { font-size: 15px; }
+      .career-title span { font-size: 11px; }
+      .career-time { font-size: 10px; }
+      .career-row p { margin-top: 8px; font-size: 12px; }
+      .contact { padding: 44px 0 36px; }
+      .footer { padding-block: 13px; }
+      .footer-inner { flex-wrap: wrap; gap: 0 16px; font-size: 9px; }
+      .footer-inner > .mono { display: none; }
+    }
+    @media (max-width: 360px) {
+      .wrap { width: calc(100% - 32px); }
+      .hero h1 { font-size: 32px; }
+      .hero-topline { gap: 10px; }
+      .small-visual { padding-inline: 17px; }
+      .agent-flow { font-size: 11px; gap: 5px; }
+      .career-title { flex-wrap: wrap; gap: 2px 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+    }
+    /* Prism visual system: a luminous hero, quiet glass surfaces below. */
+    [hidden] { display: none !important; }
+    .header { border-bottom-color: rgba(112,122,164,.16); }
+    .hero { padding-top: 30px; }
+    .hero-topline { padding-bottom: 0; }
+    .hero-grid { grid-template-columns: 1.12fr 1fr; gap: 12px; min-height: 590px; }
+    .hero h1 { font-size: clamp(40px, 4.45vw, 63px); line-height: 1.5; font-weight: 450; letter-spacing: -.055em; }
+    .hero h1 em { color: #bfc4ff; }
+    .hero-copy { max-width: 500px; font-size: 14px; }
+    .identity { font-size: 14px; }
+    .hero-foot { margin-top: 0; border-top-color: #292d3d; border-bottom-color: #292d3d; }
+    .button { background: #d9ddff; border-color: #d9ddff; color: #151525; border-radius: 4px; }
+    .button:hover { background: #bfc8ff; border-color: #bfc8ff; box-shadow: 0 0 24px #9d9bff20; }
+    .text-link { border-bottom-color: #4b526d; }
+    .prism-stage { position: relative; height: 600px; min-width: 0; }
+    .prism-art { position: absolute; inset: 0 -35px; pointer-events: none; mask-image: radial-gradient(ellipse at 50% 48%, black 44%, transparent 73%); }
+    #prism-canvas, .prism-fallback { width: 100%; height: 100%; position: absolute; inset: 0; display: block; }
+    #prism-canvas { opacity: 0; transition: opacity .35s ease; }
+    .prism-ready #prism-canvas { opacity: 1; }
+    .prism-ready .prism-fallback { visibility: hidden; }
+    .prism-label { position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); white-space: nowrap; color: #878ca7; font-size: 9px; letter-spacing: .16em; }
+    .motion-toggle { position: absolute; bottom: 29px; right: -20px; display: flex; align-items: center; gap: 10px; min-height: 36px; padding: 6px 9px; border: 1px solid #33394f; border-radius: 3px; color: #aeb5d2; background: #0f1220; font-size: 10px; cursor: pointer; }
+    .motion-toggle:hover { border-color: #8187b5; color: #e0e4ff; }
+    .section-title, .contact-title { font-weight: 450; letter-spacing: -.04em; }
+    .project h3 { font-weight: 450; }
+    .project-meta, .section-label .mono { color: #b5bcec; }
+    .agent-visual { background: radial-gradient(ellipse at 15% 100%, #2862782b, transparent 80%), #10151f; }
+    .growth-visual { background: radial-gradient(ellipse at 70% 100%, #7147802b, transparent 80%), #15121f; }
+    .small-visual { border-radius: 7px; }
+    .metric-value { font-family: var(--sans); font-weight: 350; }
+    .tag { border-radius: 3px; background: #ffffff03; }
+    .method { color: var(--ink); position: relative; background: radial-gradient(ellipse at 80% 110%, #40375822, transparent 65%), #0f111b; border-block: 1px solid #292c3e; }
+    .method .section-title { font-weight: 450; }
+    .method-grid { border-color: #34374b; }
+    .contact { position: relative; }
+    .contact::before { content: ""; position: absolute; width: 60%; height: 160px; right: 0; bottom: 10px; background: radial-gradient(ellipse, #56539914, transparent 70%); pointer-events: none; z-index: -1; }
+    .footer-inner { color: #8e95ad; }
+    @media (max-width: 1000px) {
+      .hero-grid { grid-template-columns: 1.2fr 1fr; min-height: 530px; gap: 0; }
+      .hero h1 { font-size: 45px; }
+      .prism-stage { height: 530px; }
+      .prism-art { inset: 0 -28px; }
+      .motion-toggle { right: 0; bottom: 62px; }
+    }
+    @media (max-width: 760px) {
+      .hero { padding-top: 28px; }
+      .hero-topline { padding-bottom: 30px; }
+      .hero-grid { grid-template-columns: 1fr; min-height: 0; gap: 0; }
+      .hero h1 { font-size: clamp(35px, 8.7vw, 54px); line-height: 1.45; }
+      .hero-copy { font-size: 13px; }
+      .hero-copy br { display: none; }
+      .hero-actions { margin-top: 22px; }
+      .prism-stage { height: 320px; margin-top: 12px; }
+      .prism-art { inset: -35px -10px -20px; }
+      .prism-label { bottom: 16px; left: 0; transform: none; font-size: 8px; }
+      .motion-toggle { bottom: 6px; right: 0; }
+      .hero-foot { margin-top: 0; }
+      .hero-foot .practice-list { column-gap: 12px; }
+      .identity { font-size: 12px; }
+      .section-title { font-size: 29px; line-height: 1.6; }
+    }
+    @media (max-width: 360px) {
+      .hero h1 { font-size: 31px; }
+      .hero-topline .mono { font-size: 8px; }
+      .prism-stage { height: 280px; }
     }
 
-    .container {
-      max-width: var(--page-max-width);
-      margin: 0 auto;
-      padding: 0 var(--spacing-24);
-    }
 
-    section { padding: var(--spacing-104) 0; position: relative; }
-
-    /* 渐变文字 */
-    .grad-text {
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    /* 眉题 */
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--spacing-8);
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      line-height: var(--leading-caption);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-      font-weight: var(--font-weight-medium);
-      margin-bottom: var(--spacing-16);
-    }
-
-    .eyebrow .dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      box-shadow: 0 0 10px var(--color-iris-violet-glow);
-    }
-
-    .section-head { margin-bottom: var(--spacing-64); }
-
-    .section-head h2 {
-      font-family: var(--font-domaine);
-      font-size: var(--text-heading);
-      line-height: var(--leading-heading);
-      letter-spacing: var(--tracking-heading);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-    }
-
-    .section-head p {
-      margin-top: var(--spacing-16);
-      max-width: 480px;
-      font-size: var(--text-body);
-      color: var(--color-ash-gray);
-    }
-
-    /* ============ 导航 ============ */
-    header {
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      z-index: 1000;
-      background: var(--surface-backdrop-blur);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      box-shadow: var(--shadow-subtle);
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 68px;
-    }
-
-    .logo {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-body-sm);
-      font-weight: var(--font-weight-semibold);
-      letter-spacing: 0.06em;
-      color: var(--color-white);
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-8);
-      text-transform: uppercase;
-    }
-
-    .logo .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      box-shadow: 0 0 12px var(--color-iris-violet-glow);
-    }
-
-    .nav-links { display: flex; gap: var(--spacing-32); align-items: center; }
-
-    .nav-links a {
-      font-size: var(--text-caption);
-      font-weight: var(--font-weight-medium);
-      color: var(--color-ash-gray);
-      transition: color 0.2s ease;
-    }
-
-    .nav-links a:hover { color: var(--color-white); }
-
-    .nav-cta {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--spacing-8);
-      padding: var(--spacing-8) var(--spacing-16);
-      border-radius: var(--radius-buttons);
-      font-size: var(--text-caption);
-      font-weight: var(--font-weight-semibold);
-      color: var(--color-white);
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      transition: filter 0.2s ease, transform 0.2s ease;
-    }
-
-    .nav-cta:hover { filter: brightness(1.12); transform: translateY(-1px); }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: 1px solid var(--color-graphite-hairline);
-      border-radius: var(--radius-md);
-      padding: 10px;
-    }
-
-    .hamburger span {
-      width: 22px; height: 2px;
-      background: var(--color-white);
-      transition: 0.25s ease;
-    }
-
-    /* ============ Hero ============ */
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding-top: 68px;
-      background:
-        radial-gradient(ellipse 50% 45% at 78% 8%, rgba(146, 129, 247, 0.16), transparent 60%),
-        radial-gradient(ellipse 35% 35% at 8% 90%, rgba(59, 158, 255, 0.08), transparent 55%),
-        var(--surface-void);
-      border-bottom: 1px solid var(--color-graphite-hairline);
-    }
-
-    .hero-top {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--spacing-12);
-      padding: var(--spacing-8) var(--spacing-16);
-      border-radius: 999px;
-      background: rgba(58, 211, 137, 0.08);
-      box-shadow: var(--shadow-subtle);
-      margin-bottom: var(--spacing-32);
-    }
-
-    .hero-top .pulse {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--color-pulse-green);
-      box-shadow: 0 0 0 0 rgba(58, 211, 137, 0.6);
-      animation: pulse-ring 2s infinite;
-    }
-    @keyframes pulse-ring {
-      0% { box-shadow: 0 0 0 0 rgba(58, 211, 137, 0.55); }
-      70% { box-shadow: 0 0 0 8px rgba(58, 211, 137, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(58, 211, 137, 0); }
-    }
-
-    .hero-top span {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-pulse-green);
-      font-weight: var(--font-weight-semibold);
-    }
-
-    .hero-title {
-      font-family: var(--font-domaine);
-      font-size: var(--text-display);
-      line-height: var(--leading-display);
-      letter-spacing: var(--tracking-display);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-      margin-bottom: var(--spacing-24);
-    }
-
-    .hero-title .block { display: block; }
-
-    .hero-sub {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-subheading);
-      line-height: var(--leading-subheading);
-      color: var(--color-bone-white);
-      font-weight: var(--font-weight-regular);
-      margin-bottom: var(--spacing-16);
-    }
-
-    .hero-desc {
-      max-width: 520px;
-      color: var(--color-ash-gray);
-      margin-bottom: var(--spacing-40);
-    }
-
-    .btn-group { display: flex; gap: var(--spacing-16); flex-wrap: wrap; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--spacing-8);
-      padding: var(--spacing-12) var(--spacing-24);
-      border-radius: var(--radius-buttons);
-      font-size: var(--text-body-sm);
-      font-weight: var(--font-weight-semibold);
-      cursor: pointer;
-      transition: all 0.25s ease;
-      border: none;
-    }
-
-    .btn-primary {
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      color: var(--color-white);
-    }
-
-    .btn-primary:hover {
-      filter: brightness(1.12);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 32px rgba(146, 129, 247, 0.35);
-    }
-
-    .btn-outline {
-      background: var(--surface-surface-lift);
-      box-shadow: var(--shadow-subtle);
-      color: var(--color-bone-white);
-    }
-
-    .btn-outline:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-subtle), 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Hero 状态面板 */
-    .hero-panel {
-      margin-top: var(--spacing-64);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--color-graphite-hairline);
-      border-radius: var(--radius-2xl);
-      overflow: hidden;
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .hero-panel .cell {
-      background: var(--surface-surface-lift);
-      padding: var(--spacing-24);
-    }
-
-    .hero-panel .cell .k {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-      display: block;
-      margin-bottom: var(--spacing-8);
-    }
-
-    .hero-panel .cell .v {
-      color: var(--color-bone-white);
-      font-size: var(--text-body-sm);
-      font-weight: var(--font-weight-medium);
-    }
-
-    .hero-panel .cell .v.status { color: var(--color-pulse-green); }
-
-    /* ============ 关于 ============ */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: var(--spacing-64);
-    }
-
-    .about-text .lead {
-      font-family: var(--font-domaine);
-      font-size: var(--text-heading-lg);
-      line-height: var(--leading-heading-lg);
-      letter-spacing: var(--tracking-heading-lg);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-      margin-bottom: var(--spacing-32);
-    }
-
-    .about-text p {
-      color: var(--color-ash-gray);
-      margin-bottom: var(--spacing-20);
-    }
-
-    .about-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-16);
-    }
-
-    .stat-card {
-      background: var(--surface-surface-lift);
-      border-radius: var(--radius-cards);
-      padding: var(--spacing-32);
-      box-shadow: var(--shadow-subtle);
-      transition: all 0.25s ease;
-    }
-
-    .stat-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-subtle), 0 16px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .stat-card .num {
-      font-family: var(--font-domaine);
-      font-size: var(--text-heading);
-      line-height: 1;
-      font-weight: var(--font-weight-regular);
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      display: inline-block;
-    }
-
-    .stat-card .lbl {
-      display: block;
-      margin-top: var(--spacing-12);
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-    }
-
-    /* ============ 技能 ============ */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--spacing-16);
-    }
-
-    .skill-card {
-      background: var(--surface-surface-lift);
-      border-radius: var(--radius-cards);
-      padding: var(--card-padding);
-      box-shadow: var(--shadow-subtle);
-      transition: all 0.25s ease;
-    }
-
-    .skill-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-subtle), 0 16px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .skill-card .head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: var(--spacing-24);
-      padding-bottom: var(--spacing-16);
-      border-bottom: 1px solid var(--color-graphite-hairline);
-    }
-
-    .skill-card h3 {
-      font-family: var(--font-domaine);
-      font-size: var(--text-subheading);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-    }
-
-    .skill-card .head span {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-    }
-
-    .skill-row { margin-bottom: var(--spacing-20); }
-    .skill-row:last-child { margin-bottom: 0; }
-
-    .skill-row .meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: var(--text-body-sm);
-      margin-bottom: var(--spacing-8);
-    }
-
-    .skill-row .meta .name { color: var(--color-bone-white); }
-    .skill-row .meta .pct { color: var(--color-iron); font-family: var(--font-commit-mono); font-size: var(--text-caption); }
-
-    .skill-bar {
-      height: 5px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .skill-bar .fill {
-      height: 100%;
-      width: 0;
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      border-radius: 999px;
-      transition: width 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-
-    /* ============ 项目 ============ */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-16);
-    }
-
-    .project-card {
-      background: var(--surface-surface-lift);
-      border-radius: var(--radius-cards);
-      overflow: hidden;
-      box-shadow: var(--shadow-subtle);
-      transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .project-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-subtle), 0 16px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .project-thumb {
-      height: 150px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 44px;
-      background:
-        linear-gradient(135deg, rgba(146, 129, 247, 0.18), transparent 55%),
-        var(--color-surface-gradient);
-      border-bottom: 1px solid var(--color-graphite-hairline);
+    /* GlassSurface: RGB backdrop refraction, with a readable frosted fallback. */
+    .glass-control {
+      --glass-tint: rgba(213, 224, 255, .075);
       position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      border: 1px solid rgba(226, 232, 255, .22);
+      border-radius: 50px;
+      background: var(--glass-tint);
+      color: #eef1ff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.22), inset 0 -1px 0 rgba(200,208,255,.07), 0 5px 18px rgba(0,0,0,.14);
+      text-shadow: 0 1px 6px rgba(0,0,0,.3);
+      transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
     }
-
-    .project-thumb .idx {
-      position: absolute;
-      top: var(--spacing-16);
-      left: var(--spacing-16);
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.06em;
-      color: var(--color-iris-violet-glow);
-    }
-
-    .project-body {
-      padding: var(--spacing-24);
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-    }
-
-    .project-body h3 {
-      font-family: var(--font-domaine);
-      font-size: var(--text-subheading);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-      margin-bottom: var(--spacing-8);
-    }
-
-    .project-body p {
-      color: var(--color-ash-gray);
-      font-size: var(--text-body-sm);
-      line-height: var(--leading-body-sm);
-      flex: 1;
-      margin-bottom: var(--spacing-16);
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--spacing-8);
-      margin-bottom: var(--spacing-16);
-    }
-
-    .tag {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.04em;
-      color: var(--color-bone-white);
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: var(--shadow-subtle);
-      border-radius: var(--radius-badges);
-      padding: 5px 10px;
-    }
-
-    .project-links {
-      display: flex;
-      gap: var(--spacing-20);
-      font-size: var(--text-body-sm);
-      font-weight: var(--font-weight-semibold);
-    }
-
-    .project-links a { color: var(--color-iris-violet-glow); transition: color 0.2s ease; }
-    .project-links a:hover { color: var(--color-white); }
-
-    /* ============ 经历 ============ */
-    .timeline {
-      position: relative;
-      max-width: 720px;
-    }
-
-    .timeline::before {
+    .glass-control::before {
       content: "";
       position: absolute;
-      left: 0; top: 0; bottom: 0;
-      width: 1px;
-      background: var(--color-graphite-hairline);
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(128deg, rgba(255,255,255,.12), rgba(202,215,255,.025) 48%, rgba(194,180,242,.055));
+      -webkit-backdrop-filter: blur(12px) saturate(1.5) brightness(1.12);
+      backdrop-filter: blur(12px) saturate(1.5) brightness(1.12);
     }
-
-    .timeline-item {
-      position: relative;
-      padding-left: var(--spacing-40);
-      padding-bottom: var(--spacing-48);
+    .glass-control.glass-svg { -webkit-backdrop-filter: blur(9px); backdrop-filter: blur(9px); }
+    .glass-control.glass-svg::before {
+      /* Keep stronger refraction on the lens rim, clear of the label. */
+      padding: 3px;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      -webkit-backdrop-filter: var(--glass-filter) saturate(1.15);
+      backdrop-filter: var(--glass-filter) saturate(1.15);
     }
-
-    .timeline-item:last-child { padding-bottom: 0; }
-
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -4px; top: 5px;
-      width: 9px; height: 9px; border-radius: 50%;
-      background: var(--gradient-iris-violet-fallback);
-      background: var(--gradient-iris-violet);
-      box-shadow: 0 0 12px var(--color-iris-violet-glow);
+    .glass-control:hover {
+      background: rgba(222,230,255,.14);
+      border-color: rgba(237,242,255,.43);
+      color: #fff;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(188,205,255,.14), 0 6px 24px rgba(139,153,255,.09);
     }
-
-    .timeline-item .time {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-      margin-bottom: var(--spacing-8);
-      display: block;
+    .glass-control:active { background: rgba(195,210,255,.19); box-shadow: inset 0 2px 8px rgba(0,0,0,.16); }
+    .glass-control:focus-visible { outline: 2px solid #d0dcff; outline-offset: 4px; }
+    .glass-primary { --glass-tint: rgba(211,224,255,.17); border-color: rgba(236,242,255,.36); }
+    .button.glass-control { min-height: 52px; padding: 13px 24px; }
+    .text-link.glass-control { min-height: 50px; padding: 11px 21px; }
+    .nav .nav-contact.glass-control { color: #eef1ff; min-height: 42px; padding: 7px 18px; }
+    .menu-toggle.glass-control { padding: 8px 16px; }
+    .motion-toggle.glass-control { position: absolute; min-height: 40px; padding: 8px 13px; }
+    .copy-button.glass-control { padding: 8px 15px; color: #e2e8ff; }
+    .case-details { padding-top: 17px; }
+    .case-details summary.glass-control { padding: 12px 19px; min-height: 48px; font-size: 12px; }
+    .case-details[open] summary.glass-control { border-color: rgba(211,219,255,.36); background: rgba(173,188,235,.11); }
+    .case-details summary.glass-control::after { color: #d4dcff; }
+    .glass-filter-defs { position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none; }
+    @supports not ((backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px))) {
+      .glass-control { background: #202431; }
+      .glass-primary { background: #32384c; }
+      .glass-control:hover { background: #394059; }
     }
-
-    .timeline-item h3 {
-      font-family: var(--font-domaine);
-      font-size: var(--text-subheading);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-      margin-bottom: var(--spacing-8);
+    @media (max-width: 760px) {
+      .hero-actions { gap: 12px; }
+      .button.glass-control { gap: 24px; padding-inline: 19px; }
+      .text-link.glass-control { gap: 14px; padding-inline: 17px; }
+      .nav .nav-contact.glass-control { padding: 6px 12px; min-height: 40px; gap: 7px; }
+      .copy-button.glass-control { margin-top: 5px; }
     }
-
-    .timeline-item .org {
-      font-size: var(--text-body-sm);
-      font-weight: var(--font-weight-medium);
-      color: var(--color-iris-violet-glow);
-      margin-bottom: var(--spacing-12);
-      display: block;
+    @media (max-width: 360px) {
+      .button.glass-control { gap: 15px; padding-inline: 15px; }
+      .text-link.glass-control { gap: 10px; padding-inline: 14px; }
+      .nav { gap: 10px; }
+      .nav .nav-contact.glass-control { padding-inline: 10px; gap: 5px; }
     }
-
-    .timeline-item p {
-      color: var(--color-ash-gray);
-      font-size: var(--text-body-sm);
-      line-height: var(--leading-body-sm);
-    }
-
-    /* ============ 联系 ============ */
-    .contact-wrap {
-      display: grid;
-      grid-template-columns: 1fr 1.25fr;
-      gap: var(--spacing-64);
-      align-items: start;
-    }
-
-    .contact-info h3 {
-      font-family: var(--font-domaine);
-      font-size: var(--text-heading-lg);
-      line-height: var(--leading-heading-lg);
-      letter-spacing: var(--tracking-heading-lg);
-      font-weight: var(--font-weight-regular);
-      color: var(--color-white);
-      margin-bottom: var(--spacing-16);
-    }
-
-    .contact-info > p {
-      color: var(--color-ash-gray);
-      margin-bottom: var(--spacing-32);
-    }
-
-    .contact-list {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-12);
-    }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: var(--spacing-16);
-      padding: var(--spacing-16) var(--spacing-20);
-      background: var(--surface-surface-lift);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-subtle);
-      font-size: var(--text-body-sm);
-    }
-
-    .contact-item .icon {
-      width: 40px; height: 40px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: var(--radius-md);
-      background: rgba(146, 129, 247, 0.12);
-      font-size: 18px;
-    }
-
-    .contact-item .lbl {
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .contact-item .val { color: var(--color-bone-white); }
-
-    .contact-form {
-      background: var(--surface-surface-lift);
-      border-radius: var(--radius-large-panels);
-      padding: var(--spacing-32);
-      box-shadow: var(--shadow-subtle);
-    }
-
-    .form-group { margin-bottom: var(--spacing-20); }
-
-    .form-group label {
-      display: block;
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--color-iron);
-      margin-bottom: var(--spacing-8);
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: var(--spacing-12) var(--spacing-16);
-      background: var(--color-void-black);
-      border: 1px solid var(--color-graphite-hairline);
-      border-radius: var(--radius-inputs);
-      color: var(--color-white);
-      font-family: var(--font-inter);
-      font-size: var(--text-body);
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-      resize: vertical;
-    }
-
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: var(--color-iron); }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--color-iris-violet);
-      box-shadow: 0 0 0 3px rgba(146, 129, 247, 0.18);
-    }
-
-    .form-group textarea { min-height: 130px; }
-
-    /* ============ 页脚 ============ */
-    footer {
-      border-top: 1px solid var(--color-graphite-hairline);
-      padding: var(--spacing-40) 0;
-      background: var(--surface-surface-lift);
-    }
-
-    .foot-inner {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: var(--spacing-16);
-      font-family: var(--font-commit-mono);
-      font-size: var(--text-caption);
-      letter-spacing: 0.04em;
-      color: var(--color-iron);
-    }
-
-    .foot-inner b { color: var(--color-bone-white); font-weight: var(--font-weight-medium); }
-
-    /* ============ 揭示动画 ============ */
-    .reveal {
-      opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ============ 响应式 ============ */
-    @media (max-width: 900px) {
-      .hero-title { font-size: var(--text-heading-lg); }
-      .about-grid, .contact-wrap { grid-template-columns: 1fr; gap: var(--spacing-48); }
-      .skills-grid { grid-template-columns: 1fr 1fr; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .hero-panel { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      section { padding: var(--spacing-80) 0; }
-      .container { padding: 0 var(--spacing-20); }
-
-      .nav-links {
-        position: fixed;
-        top: 0; right: -100%;
-        width: 75%;
-        height: 100vh;
-        background: var(--surface-backdrop-blur);
-        backdrop-filter: blur(20px);
-        flex-direction: column;
-        justify-content: center;
-        gap: var(--spacing-28);
-        transition: right 0.3s ease;
-        box-shadow: var(--shadow-subtle);
-      }
-      .nav-links.open { right: 0; }
-      .nav-links a { font-size: var(--text-body); }
-      .hamburger { display: flex; z-index: 1001; }
-      .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-      .hamburger.active span:nth-child(2) { opacity: 0; }
-      .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-      .hero-title { font-size: 48px; }
-      .section-head h2 { font-size: 40px; }
-      .about-text .lead { font-size: 36px; }
-      .contact-info h3 { font-size: 36px; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .about-stats { grid-template-columns: 1fr 1fr; }
-      .hero-panel { grid-template-columns: 1fr 1fr; }
-    }
+    @media (prefers-reduced-motion: reduce) { .glass-control { transition: none; } }
   </style>
+  <link rel="stylesheet" href="interactions.css">
 </head>
 <body>
-
-  <!-- ============ 导航 ============ -->
-  <header>
-    <div class="container">
-      <nav>
-        <a href="#home" class="logo"><span class="dot"></span>WYZ — Portfolio</a>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#home">首页</a></li>
-          <li><a href="#about">关于</a></li>
-          <li><a href="#skills">技能</a></li>
-          <li><a href="#projects">项目</a></li>
-          <li><a href="#experience">经历</a></li>
-          <li><a href="#contact" class="nav-cta">联系我</a></li>
-        </ul>
-        <button class="hamburger" id="hamburger" aria-label="菜单">
-          <span></span><span></span><span></span>
-        </button>
+  <div class="site-background" aria-hidden="true" data-state="fallback">
+    <svg class="waves-fallback" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs><linearGradient id="waves-color" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5227ff"/><stop offset=".62" stop-color="#ff9ffc"/><stop offset="1" stop-color="#ffffff"/></linearGradient></defs>
+      <path d="M-140 780C280 480 610 1020 1050 580S1590 500 1660 770V1100H-140Z" fill="url(#waves-color)" opacity=".42"/>
+      <path d="M-140 830C280 530 590 1030 1050 625S1590 550 1660 820" stroke="#ffb9fa" stroke-width="2" fill="none" opacity=".48"/>
+      <path d="M-100 945C290 740 510 1100 1130 790S1530 780 1580 970V1100H-100Z" fill="url(#waves-color)" opacity=".23"/>
+    </svg>
+    <canvas id="waves-canvas"></canvas>
+  </div>
+  <a class="skip" href="#main">跳至正文</a>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#home" aria-label="Jyn，返回首页"><span class="brand-logo" aria-hidden="true">Jyn</span></a>
+      <button class="menu-toggle glass-control" type="button" aria-controls="primary-nav" aria-expanded="false">导航 <span aria-hidden="true">＋</span></button>
+      <nav class="nav" id="primary-nav" aria-label="主导航">
+        <a href="#projects">项目实践</a>
+        <a href="#github">GitHub</a>
+        <a href="#approach">工作方法</a>
+        <a href="#experience">职业经历</a>
+        <a class="nav-contact glass-control" href="mailto:yzz93139@gmail.com">联系我 <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
-
-  <!-- ============ Hero ============ -->
-  <section class="hero" id="home">
-    <div class="container">
-      <div class="hero-top">
-        <span class="pulse"></span>
-        <span>Available for work</span>
+  <nav class="line-sidebar" aria-label="章节导航"><p class="sidebar-caption">EXPLORE / JYN</p><ol>
+    <li><a href="#home"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">00</span>Home</span></a></li>
+    <li><a href="#projects"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">01</span>Projects</span></a></li>
+    <li><a href="#github"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">02</span>GitHub</span></a></li>
+    <li><a href="#approach"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">03</span>Approach</span></a></li>
+    <li><a href="#experience"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">04</span>Experience</span></a></li>
+    <li><a href="#contact"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">05</span>Contact</span></a></li>
+  </ol></nav>
+  <main id="main">
+    <section class="hero wrap" id="home" aria-labelledby="hero-title">
+      <div class="hero-topline">
+        <span class="mono muted">WEN YAOZHEN / PORTFOLIO 2026</span>
       </div>
-
-      <h1 class="hero-title">
-        <span class="block">温曜榛</span>
-        <span class="block grad-text">创造数字体验</span>
-      </h1>
-
-      <p class="hero-sub">全栈开发者 · Full-Stack Developer</p>
-
-      <p class="hero-desc">
-        专注于高性能、优雅的 Web 应用，将复杂问题转化为简洁解决方案。
-        从代码架构到交互细节，追求每一处的精准与克制。
-      </p>
-
-      <div class="btn-group">
-        <a href="#projects" class="btn btn-primary">查看项目 ↗</a>
-        <a href="#contact" class="btn btn-outline">联系我</a>
-      </div>
-
-      <div class="hero-panel">
-        <div class="cell">
-          <span class="k">Base</span>
-          <span class="v">中国 · 北京</span>
-        </div>
-        <div class="cell">
-          <span class="k">Focus</span>
-          <span class="v">Web / 全栈</span>
-        </div>
-        <div class="cell">
-          <span class="k">Stack</span>
-          <span class="v">TS · Node · React</span>
-        </div>
-        <div class="cell">
-          <span class="k">Status</span>
-          <span class="v status">● Open</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 关于 ============ -->
-  <section id="about">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span>About</span>
-        <h2>关于<span class="grad-text">我</span></h2>
-        <p>认识一下我是谁，我在做什么。</p>
-      </div>
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <p class="lead">你好，我是温曜榛。<br />一名热爱技术与设计、相信「少即是多」的全栈开发者。</p>
-          <p>
-            拥有计算机科学背景，过去几年专注 Web 开发，积累了从概念设计到产品上线的完整经验。
-            我关注工程效率、代码质量与用户体验，也乐于探索 AI、开源等前沿技术。
-          </p>
-          <p>
-            工作之余，我喜欢摄影、技术写作与徒步。目前正寻找新的机会，
-            期待与志同道合的团队一起，用技术解决真实世界的问题。
-          </p>
-        </div>
-        <div class="about-stats reveal">
-          <div class="stat-card">
-            <span class="num" data-count="5">0</span>
-            <span class="lbl">Years Experience</span>
+      <div class="hero-grid">
+        <div>
+          <p class="identity"><strong>温曜榛</strong><span class="slash" aria-hidden="true">/</span><span>AI 产品经理</span></p>
+          <h1 id="hero-title">把 AI 能力，<br>变成<em>可用的产品。</em></h1>
+          <div class="hero-copy"><p>从内容制作到线下经营，我习惯在真实场景中找到问题。</p><p>围绕在线互动、辅助创作与内容增长，<br>推进需求定义、原型验证和迭代，<span class="keep-phrase">让 AI 进入日常业务。</span></p></div>
+          <div class="hero-actions">
+            <a class="button glass-control glass-primary" href="#projects">查看项目实践 <span aria-hidden="true">↓</span></a>
           </div>
-          <div class="stat-card">
-            <span class="num" data-count="40">0</span>
-            <span class="lbl">Projects Done</span>
+        </div>
+        <div class="prism-stage">
+          <div class="prism-art" aria-hidden="true">
+            <svg class="prism-fallback" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs><linearGradient id="prism-spectrum" x1="130" y1="200" x2="470" y2="430" gradientUnits="userSpaceOnUse"><stop stop-color="#9f7bff"/><stop offset=".48" stop-color="#a4f7ff"/><stop offset="1" stop-color="#ffb6ef"/></linearGradient><filter id="prism-blur"><feGaussianBlur stdDeviation="16"/></filter></defs>
+              <path d="M300 115L105 435L470 398L300 115Z M300 115L319 487L105 435 M319 487L470 398" stroke="url(#prism-spectrum)" stroke-width="15" opacity=".35" filter="url(#prism-blur)"/>
+              <path d="M300 115L105 435L470 398L300 115Z M300 115L319 487L105 435 M319 487L470 398" stroke="url(#prism-spectrum)" stroke-width="1.5" opacity=".8"/>
+              <path d="M300 115L105 435L319 487L300 115Z" fill="url(#prism-spectrum)" opacity=".1"/>
+            </svg>
+            <canvas id="prism-canvas"></canvas>
           </div>
-          <div class="stat-card">
-            <span class="num" data-count="25">0</span>
-            <span class="lbl">Happy Clients</span>
+          <div class="profile-shell">
+            <a class="profile-card" href="#github" aria-label="Jyn · Wen，查看 GitHub 项目">
+              <div class="profile-top" aria-hidden="true"><span>PROFILE / 01</span><span class="profile-dot"></span></div>
+              <div class="profile-photo-placeholder" aria-hidden="true"><span class="profile-monogram">Jyn</span></div>
+              <div class="profile-nameplate"><span class="profile-signature">JYN · WEN</span><span class="profile-role">AI·PM</span></div>
+            </a>
           </div>
-          <div class="stat-card">
-            <span class="num" data-count="10">0</span>
-            <span class="lbl">Awards Won</span>
-          </div>
+          <span class="prism-label mono">IDEAS INTO REALITY</span>
+          <button class="motion-toggle glass-control" type="button" hidden><span class="motion-text">暂停动画</span> <span class="motion-icon" aria-hidden="true">Ⅱ</span></button>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="hero-foot">
+        <div class="practice-list"><span class="mono">CORE PRACTICE</span><span>在线 AI 剧本杀</span><span class="divide" aria-hidden="true"></span><span>剧本创作 Agent</span><span class="divide" aria-hidden="true"></span><span>内容与 GEO 增长</span></div>
+        <a class="scroll-cue" href="#projects" aria-label="向下查看项目">↓</a>
+      </div>
+    </section>
 
-  <!-- ============ 技能 ============ -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span>Skills</span>
-        <h2>技术<span class="grad-text">栈</span></h2>
-        <p>我在日常工作中使用的核心技术。</p>
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <p class="section-label"><span class="mono">01 /</span> 项目实践</p>
+        <div><h2 class="section-title" id="projects-title">从一个业务问题，<br>走到一套可用的方案。</h2><div class="intro project-intro"><p>三个来自剧本杀经营场景的项目，分别回应体验、创作与增长。</p><p>我的工作贯穿需求梳理、产品设计、实现验证和效果复盘。</p></div></div>
       </div>
-      <div class="skills-grid">
-        <div class="skill-card reveal">
-          <div class="head">
-            <h3>前端开发</h3>
-            <span>Front-end</span>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">HTML / CSS</span><span class="pct">95%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="95"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">JavaScript / TypeScript</span><span class="pct">90%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="90"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">React / Vue</span><span class="pct">88%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="88"></div></div>
-          </div>
+      <nav class="project-select" aria-label="选择项目">
+        <span class="project-select-title">EXPLORE THE WORK</span>
+        <a class="glass-icon" href="#project-game"><span class="glass-icon-object" aria-hidden="true"><span class="glass-icon-back"></span><span class="glass-icon-front"><svg viewBox="0 0 24 24"><path d="M7 7h10c3 0 5 8 3 10-1 1-3-1-4-2H8c-1 1-3 3-4 2C2 15 4 7 7 7Z"/><path d="M8 9v5m-2.5-2.5h5m5-1h.1m2 2h.1"/></svg></span></span><span>在线互动</span></a>
+        <a class="glass-icon" href="#project-agent"><span class="glass-icon-object" aria-hidden="true"><span class="glass-icon-back"></span><span class="glass-icon-front"><svg viewBox="0 0 24 24"><path d="M13 3H5v18h14V10m-5-7v6h6M8 13h7m-7 4h5"/><path d="m17 2 1 2 2 1-2 1-1 2-1-2-2-1 2-1Z"/></svg></span></span><span>创作 Agent</span></a>
+        <a class="glass-icon" href="#project-growth"><span class="glass-icon-object" aria-hidden="true"><span class="glass-icon-back"></span><span class="glass-icon-front"><svg viewBox="0 0 24 24"><path d="M4 4v16h17M8 16v-4m5 4V9m5 7V6m-11 0 5-3 6 1"/></svg></span></span><span>内容增长</span></a>
+      </nav>
+      <article class="project feature" id="project-game">
+        <div>
+          <div class="project-meta"><span class="project-kind">01 / AI INTERACTION</span><span>2024.06 — 2026.07</span></div>
+          <h3>在线 AI 剧本杀</h3>
+          <p class="project-lead">让剧情互动不再受限于到店时间、组局和主持资源。围绕玩家的在线参与过程，定义 MVP 的必要能力，验证 AI 能否持续提供符合情境的反馈。</p>
+          <p class="role"><strong>我的角色</strong>技术合伙人 · 产品规划、原型验证与技术落地</p>
+          <div class="tag-list"><span class="tag">产品 0 → 1</span><span class="tag">Vibe Coding</span><span class="tag">模型选型与评测</span></div>
+          <details class="case-details">
+            <summary class="glass-control">查看产品决策与实践</summary>
+            <div class="detail-body">
+              <div class="detail-item"><h4>先确定什么必须可用</h4><p>以剧情理解、互动反馈和流程衔接为 MVP 核心，按用户价值、实现成本和可行性安排优先级。通过产品文档、原型和验收标准对齐内容与技术协作，再借助 AI 编程完成实现与调试。</p></div>
+              <div class="detail-item"><h4>在质量、速度与成本间做取舍</h4><p>统一输入及输出约束，比较候选模型的中文剧情理解、指令遵循与上下文一致性。按任务复杂度分配调用，通过历史摘要、上下文裁剪与失败重试边界控制开销。</p></div>
+              <div class="detail-item"><h4>把体验问题变成可复测的案例</h4><p>将设定冲突、无关回答与玩家反馈分类，区分流程缺陷、提示词偏差和模型限制。覆盖正常交互、信息缺失、异常输入及流程中断，结合人工审核推进修复和回归验证。</p></div>
+            </div>
+          </details>
         </div>
-        <div class="skill-card reveal">
-          <div class="head">
-            <h3>后端开发</h3>
-            <span>Back-end</span>
+        <div>
+          <div class="project-result-heading"><span class="mono">MEASURED ITERATION</span><h4>体验与成本，<br>都放回同一口径检验。</h4></div>
+          <div class="metric-row">
+            <div><p class="metric-value"><span class="before">10</span><span class="arrow" aria-label="降至">→</span><span class="after">8</span><small>秒</small></p><span class="metric-label">平均完整响应耗时</span></div>
+            <div><p class="metric-value"><span class="before">5</span><span class="arrow" aria-label="降至">→</span><span class="after">4</span><small>元 / 百次</small></p><span class="metric-label">每百次成功交互费用</span></div>
           </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">Node.js / Python</span><span class="pct">85%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="85"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">数据库 (SQL / MongoDB)</span><span class="pct">82%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="82"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">REST / GraphQL API</span><span class="pct">80%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="80"></div></div>
-          </div>
+          <p class="metric-scope">项目记录：相邻两月同类交互，固定输入区间、输出上限及并发条件。费用含失败与重试，以质量验收通过率不下降为前提。</p>
         </div>
-        <div class="skill-card reveal">
-          <div class="head">
-            <h3>工具与其他</h3>
-            <span>Tooling</span>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">Git / Docker</span><span class="pct">86%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="86"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">UI / UX 设计</span><span class="pct">75%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="75"></div></div>
-          </div>
-          <div class="skill-row">
-            <div class="meta"><span class="name">DevOps / CI-CD</span><span class="pct">72%</span></div>
-            <div class="skill-bar"><div class="fill" data-width="72"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============ 项目 ============ -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span>Projects</span>
-        <h2>精选<span class="grad-text">项目</span></h2>
-        <p>我参与和完成的一些代表作品。</p>
+      <figure class="agent-architecture" id="agent-architecture" aria-labelledby="architecture-title">
+        <figcaption class="architecture-heading"><div><span class="mono">CURRENT PUBLIC BUILD / 2026.09</span><h4 id="architecture-title">Agent 编排与执行架构</h4></div><a class="architecture-source" href="https://github.com/w93139/AI-Script-Game" target="_blank" rel="noopener noreferrer">查看当前源码 <span aria-hidden="true">↗</span></a></figcaption>
+        <div class="architecture-route"><span class="route-dot" aria-hidden="true"></span><strong>前端已接入 · 材料问答主链路</strong><code>POST /api/fusion/package-plays/{play_id}/ask</code></div>
+        <ol class="architecture-pipeline" aria-label="问答处理的六个步骤">
+          <li class="architecture-node"><span class="architecture-number">01 / REQUEST</span><strong>玩家提问</strong><p>浏览器提交问题<br>关联当前游戏会话</p><span class="architecture-tech">Next.js → FastAPI</span></li>
+          <li class="architecture-node"><span class="architecture-number">02 / ORCHESTRATE</span><strong>会话编排</strong><p>版本绑定与请求幂等<br>预留请求和调用预算</p><span class="architecture-tech">PackagePlayService</span></li>
+          <li class="architecture-node"><span class="architecture-number">03 / CONTEXT</span><strong>角色授权上下文</strong><p>按权限筛选角色材料<br>限定可见线索与引用</p><span class="architecture-tech">Role context</span></li>
+          <li class="architecture-node architecture-model"><span class="architecture-number">04 / MODEL</span><strong>受限材料选择器</strong><p>单次结构化调用<br>选择至多 3 条材料引用</p><span class="architecture-tech">PackageRoleModel</span></li>
+          <li class="architecture-node"><span class="architecture-number">05 / VALIDATE</span><strong>结果复核</strong><p>校验结构、引用与用量<br>复核权限及状态时效</p><span class="architecture-tech">Server validation</span></li>
+          <li class="architecture-node"><span class="architecture-number">06 / RETURN</span><strong>原文映射与反馈</strong><p>服务端映射合规片段<br>记录结果并返回前端</p><span class="architecture-tech">Evidence → Response</span></li>
+        </ol>
+        <div class="architecture-ledger"><div><span class="ledger-symbol" aria-hidden="true">↳</span><strong>事件账本与预算</strong><span>贯穿请求预留、结果写入与状态恢复</span></div><p><code>AI_REQUEST</code><span aria-hidden="true">→</span><code>AI_RESULT</code><span aria-hidden="true">→</span><span>事件回放</span></p></div>
+        <details class="architecture-extensions" open><summary><span>后端的 Agent 扩展能力</span><span class="extension-state">尚未接入当前前端</span><span class="extension-toggle" aria-hidden="true">＋</span></summary><p class="extension-routing"><span>会话编排</span><span aria-hidden="true">↘</span><span>按操作选择角色适配器</span><span aria-hidden="true">↗</span><span>共用结果复核与事件账本</span></p><div class="extension-grid"><div><h5>提案 Agent</h5><p>从规则提供的调查选项中生成受限提案，再交回服务端验证。</p><code>PackageProposalModel</code></div><div><h5>对话 Agent</h5><p>处理角色对白与私下回应，校验材料引用、发言边界和当前议题。</p><code>PackageDialogueModel</code></div><div><h5>决策与通话 Agent</h5><p>生成候选决策或通话内容，通过规则副本检查后执行。</p><code>BoundPackageTableModel / AttributedPackageCallModel</code></div></div><p class="extension-memory">高级分支按包版本提供角色私有事件记忆、议题与输入窗口；这些不是基本材料问答的必经步骤。</p></details>
+        <p class="architecture-note">依据当前公开仓库的实现整理；主链路与后端扩展分开展示。上方量化结果来自简历中的项目记录。</p>
+      </figure>
+      </article>
+      <div class="secondary-projects">
+        <article class="project" id="project-agent">
+          <div class="project-meta"><span class="project-kind">02 / CREATIVE AGENT</span><span>2023.12 — 2025.03</span></div>
+          <h3>剧本数字化与创作 Agent</h3>
+          <p class="project-lead">把难检索的纸质剧本转化为可调用的知识，再将人物、情节与文风调整封装为可复用任务。让辅助创作有上下文，也有明确的修改边界。</p>
+          <p class="role"><strong>我的角色</strong>需求梳理 · Skill 设计 · Agent 搭建与迭代</p>
+          <figure class="small-visual agent-visual" aria-label="创作流程示意：数字化整理、知识检索、局部改写、人工复核。">
+            <figcaption class="diagram-caption"><span>从资料到辅助创作</span><span class="mono">KNOWLEDGE → CREATION</span></figcaption>
+            <div class="agent-flow" aria-hidden="true"><span>数字化</span><span class="arrow">→</span><span>检索</span><span class="arrow">→</span><span>改写</span><span class="arrow">→</span><span>复核</span></div>
+          </figure>
+          <div class="secondary-result"><p class="metric-value"><span class="before">40</span><span class="arrow" aria-label="降至">→</span><span class="after">30</span><small>分钟</small></p><p>局部改写平均耗时</p></div>
+          <p class="metric-scope">项目记录：相邻两月、同等篇幅与修改范围，包含人工复核。</p>
+          <details class="case-details">
+            <summary class="glass-control">查看 Agent 流程设计</summary>
+            <div class="detail-body">
+              <div class="detail-item"><h4>先整理知识，再进入创作</h4><p>推进扫描、OCR、清洗和结构化整理，按人物、情节与线索组织剧本内容，建设支持 RAG 检索的领域知识库，为当前任务提供相关上下文。</p></div>
+              <div class="detail-item"><h4>让修改范围可以控制</h4><p>将局部创作需求拆成 Skill，明确输入材料、允许修改的范围、必须保留的设定和输出要求。通过 Harness 组织调用与上下文传递，衔接拆解、改写和结果检查。</p></div>
+              <div class="detail-item"><h4>把人工判断留在关键环节</h4><p>由人工检查改写边界与设定一致性，再根据问题案例调整检索和生成流程。区分基础整理与复杂创作任务，通过结果复用和上下文范围控制兼顾质量与成本。</p></div>
+            </div>
+          </details>
+        </article>
+        <article class="project" id="project-growth">
+          <div class="project-meta"><span class="project-kind">03 / CONTENT & GROWTH</span><span>2023.07 — 2026.07</span></div>
+          <h3>AI 内容营销与 GEO 运营</h3>
+          <p class="project-lead">围绕门店获客与剧本上新，连接选题、内容生产、跨平台发布和 AI 搜索反馈。让分散的品牌信息成为可复用、可持续优化的内容。</p>
+          <p class="role"><strong>我的角色</strong>工作流搭建 · 内容运营 · 效果验证</p>
+          <figure class="small-visual growth-visual" aria-label="内容迭代流程示意：用户问题、内容生产、平台发布、搜索反馈，再据此调整选题。">
+            <figcaption class="diagram-caption"><span>从用户问题到搜索反馈</span><span class="mono">CONTENT → FEEDBACK</span></figcaption>
+            <div class="growth-flow" aria-hidden="true"><span>用户问题</span><i>→</i><span>内容生产</span><i>→</i><span>平台发布</span><i>→</i><span>搜索反馈</span></div>
+            <div class="growth-return" aria-hidden="true"></div>
+          </figure>
+          <div class="secondary-result"><p class="metric-value"><span class="before">10%</span><span class="arrow" aria-label="升至">→</span><span class="after">13%</span></p><p>品牌提及率</p></div>
+          <p class="metric-scope">项目记录：相邻两月对比，固定平台、问题集与采样次数；增加 3 个百分点。</p>
+          <details class="case-details">
+            <summary class="glass-control">查看内容运营闭环</summary>
+            <div class="detail-body">
+              <div class="detail-item"><h4>从用户会问什么开始</h4><p>结合门店活动、剧本上新与潜在玩家的问题，规划关键词和选题，整理品牌与门店信息，使内容服务于具体的咨询和搜索场景。</p></div>
+              <div class="detail-item"><h4>用规范支持持续供给</h4><p>协同生产文案和视觉素材，沉淀可复用模板与视觉规范，并按平台特点调整内容结构和呈现形式。将素材用途、风格约束与验收要求前置，结合人工审核减少无效生成。</p></div>
+              <div class="detail-item"><h4>根据搜索呈现调整内容</h4><p>通过豆包检测品牌提及和引用来源，观察内容是否回答了用户的问题，再调整选题、信息结构与发布节奏，形成内容生产、搜索反馈和迭代优化的循环。</p></div>
+            </div>
+          </details>
+        </article>
       </div>
-      <div class="projects-grid">
-        <div class="project-card reveal">
-          <div class="project-thumb"><span class="idx">P-01</span>🛒</div>
-          <div class="project-body">
-            <h3>智能电商平台</h3>
-            <p>功能完整的电商平台，包含商品管理、购物车、订单系统与实时数据看板，支持高并发访问。</p>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">MongoDB</span>
-            </div>
-            <div class="project-links">
-              <a href="#">演示 ↗</a>
-              <a href="#">源码 ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-thumb"><span class="idx">P-02</span>📊</div>
-          <div class="project-body">
-            <h3>数据可视化仪表盘</h3>
-            <p>实时数据可视化解决方案，支持多种图表类型、自定义主题和数据导出功能。</p>
-            <div class="project-tags">
-              <span class="tag">Vue</span>
-              <span class="tag">ECharts</span>
-              <span class="tag">WebSocket</span>
-            </div>
-            <div class="project-links">
-              <a href="#">演示 ↗</a>
-              <a href="#">源码 ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-thumb"><span class="idx">P-03</span>📱</div>
-          <div class="project-body">
-            <h3>移动端社交应用</h3>
-            <p>跨平台社交应用，支持即时通讯、动态分享、好友系统等核心社交功能。</p>
-            <div class="project-tags">
-              <span class="tag">React Native</span>
-              <span class="tag">Firebase</span>
-              <span class="tag">GraphQL</span>
-            </div>
-            <div class="project-links">
-              <a href="#">演示 ↗</a>
-              <a href="#">源码 ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-thumb"><span class="idx">P-04</span>🤖</div>
-          <div class="project-body">
-            <h3>AI 智能助手</h3>
-            <p>基于大语言模型的智能助手，支持自然语言对话、任务自动化和知识问答。</p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">LLM</span>
-            </div>
-            <div class="project-links">
-              <a href="#">演示 ↗</a>
-              <a href="#">源码 ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-thumb"><span class="idx">P-05</span>🎮</div>
-          <div class="project-body">
-            <h3>在线协作白板</h3>
-            <p>支持多人实时协作的在线白板，包含绘图工具、评论系统和版本历史功能。</p>
-            <div class="project-tags">
-              <span class="tag">TypeScript</span>
-              <span class="tag">Canvas</span>
-              <span class="tag">WebRTC</span>
-            </div>
-            <div class="project-links">
-              <a href="#">演示 ↗</a>
-              <a href="#">源码 ↗</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-card reveal">
-          <div class="project-thumb"><span class="idx">P-06</span>☁️</div>
-          <div class="project-body">
-            <h3>个人云存储系统</h3>
-            <p>自建云存储解决方案，支持文件上传下载、在线预览、权限管理和分享链接。</p>
-            <div class="project-tags">
-              <span class="tag">Go</span>
-              <span class="tag">Docker</span>
-              <span class="tag">Redis</span>
-            </div>
-            <div class="project-links">
-              <a href="#">演示 ↗</a>
-              <a href="#">源码 ↗</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ 经历 ============ -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span>Experience</span>
-        <h2>工作<span class="grad-text">经历</span></h2>
-        <p>我的职业成长之路。</p>
+    <section class="section wrap github-section" id="github" aria-labelledby="github-title">
+      <div class="section-heading">
+        <p class="section-label"><span class="mono">02 /</span> GitHub</p>
+        <div><h2 class="section-title" id="github-title">想法往前一步，<br>留下可以查看的实现。</h2><p class="intro">近期在 GitHub 上持续迭代的产品与工具。<br>从剧本互动到个人工作流，让产品判断落到具体的界面、规则和代码中。</p><a class="github-intro-link glass-control" href="https://github.com/w93139" target="_blank" rel="noopener noreferrer">GitHub / w93139 <span aria-hidden="true">↗</span></a></div>
       </div>
-      <div class="timeline">
-        <div class="timeline-item reveal">
-          <span class="time">2023 — 至今</span>
-          <h3>高级全栈工程师</h3>
-          <span class="org">某科技公司 · 技术团队</span>
-          <p>负责核心产品的前后端架构设计与开发，主导技术升级，带领 5 人小组完成多个关键项目。</p>
-        </div>
-        <div class="timeline-item reveal">
-          <span class="time">2021 — 2023</span>
-          <h3>前端开发工程师</h3>
-          <span class="org">某互联网公司 · 产品研发部</span>
-          <p>负责公司 Web 产品的界面开发与性能优化，将首屏加载速度提升 60%。</p>
-        </div>
-        <div class="timeline-item reveal">
-          <span class="time">2019 — 2021</span>
-          <h3>初级开发工程师</h3>
-          <span class="org">某初创公司</span>
-          <p>参与多个创业项目的开发，快速学习并实践了完整的前后端开发流程。</p>
-        </div>
+      <div class="repo-list">
+        <article class="repo-row"><span class="repo-number" aria-hidden="true">01</span><div><h3 class="repo-heading"><a href="https://github.com/w93139/AI-Script-Game" target="_blank" rel="noopener noreferrer">AI-Script-Game<span aria-hidden="true">↗</span></a></h3><p class="repo-summary">基于开源底座迭代的单人 AI 剧本杀，以规则引擎管理游戏阶段与证据权限，让多角色互动遵循明确的边界。</p><div class="repo-tags"><span>Python / TypeScript</span><span>AI 互动产品</span></div></div><div class="repo-stage"><strong>本机验证中</strong><p>聚焦可运行的单人流程，尚未正式上线。基于 Jubensha AI 底座，并参考 AI Jubensha 的角色与玩法设计。</p></div></article>
+        <article class="repo-row"><span class="repo-number" aria-hidden="true">02</span><div><h3 class="repo-heading"><a href="https://github.com/w93139/juben-workbench" target="_blank" rel="noopener noreferrer">juben-workbench<span aria-hidden="true">↗</span></a></h3><p class="repo-summary">将材料整理、长文本拆解、创作蓝图与交叉审查组织进本地工作台，给复杂创作过程一个可追踪的结构。</p><div class="repo-tags"><span>TypeScript</span><span>创作工作台</span></div></div><div class="repo-stage"><strong>真实工作流联调中</strong><p>已接入模型调用、OCR 与分段拆解；完整剧本的生成、审查、导出及真人试玩仍待验收。</p></div></article>
+        <article class="repo-row"><span class="repo-number" aria-hidden="true">03</span><div><h3 class="repo-heading"><a href="https://github.com/w93139/token-usage-monitor" target="_blank" rel="noopener noreferrer">Token 监测<span aria-hidden="true">↗</span></a></h3><p class="repo-summary">集中查看任务 Token、API 用量与额度窗口的 macOS 菜单栏应用，把分散的使用记录变成随手可见的信息。</p><div class="repo-tags"><span>Swift / Python</span><span>本地优先工具</span></div></div><div class="repo-stage"><strong>已发布 v1.7.1</strong><p>提供原生菜单栏界面与本地用量查看；公开仓库包含源码、安装说明和可下载版本。</p></div></article>
+        <article class="repo-row"><span class="repo-number" aria-hidden="true">04</span><div><h3 class="repo-heading"><a href="https://github.com/w93139/github-radar" target="_blank" rel="noopener noreferrer">GitHub Radar<span aria-hidden="true">↗</span></a></h3><p class="repo-summary">整合公开项目发现、条件筛选与本地增长快照的插件和桌面仪表盘，为持续跟踪技术项目建立一套工作流。</p><div class="repo-tags"><span>Python / Swift</span><span>信息发现工具</span></div></div><div class="repo-stage"><strong>已发布 v0.5.0</strong><p>支持按时间、语言与主题筛选；增长趋势来自本地快照，随积累逐步形成观察记录。</p></div></article>
       </div>
-    </div>
-  </section>
+      <p class="repo-source-note">内容依据公开仓库与发布记录整理于 2026.09.17，当前进展以各仓库说明为准。</p>
+    </section>
 
-  <!-- ============ 联系 ============ -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-head reveal">
-        <span class="eyebrow"><span class="dot"></span>Contact</span>
-        <h2>联系<span class="grad-text">我</span></h2>
-        <p>有想法或合作？欢迎随时联系。</p>
-      </div>
-      <div class="contact-wrap">
-        <div class="contact-info reveal">
-          <h3>有想法？<br />让我们一起聊聊。</h3>
-          <p>
-            无论是项目合作、工作机会，还是单纯的技术交流，
-            我都非常乐意收到你的消息，并会尽快回复。
-          </p>
-          <div class="contact-list">
-            <div class="contact-item">
-              <div class="icon">📧</div>
-              <div><span class="lbl">Email</span><span class="val">yzz93139@gmail.com</span></div>
-            </div>
-            <div class="contact-item">
-              <div class="icon">📱</div>
-              <div><span class="lbl">Phone</span><span class="val">18515493319</span></div>
-            </div>
-            <div class="contact-item">
-              <div class="icon">📍</div>
-              <div><span class="lbl">Location</span><span class="val">中国 · 北京</span></div>
-            </div>
-            <div class="contact-item">
-              <div class="icon">🐙</div>
-              <div><span class="lbl">GitHub</span><span class="val">github.com/w93139</span></div>
-            </div>
-          </div>
+    <section class="method" id="approach" aria-labelledby="approach-title">
+      <div class="wrap">
+        <div class="section-heading"><p class="section-label"><span class="mono">03 /</span> 工作方法</p><h2 class="section-title" id="approach-title">先让它可用，<br>再验证它<em>值得用。</em></h2></div>
+        <div class="method-grid">
+          <div class="method-step"><span class="method-number">01</span><h3>把业务问题定义清楚</h3><p>从玩家、创作者与运营的具体任务出发，明确使用场景、功能边界和验收标准，再决定 MVP 的优先级。</p><div class="method-tags">需求分析 / 产品规划 / PRD</div></div>
+          <div class="method-step"><span class="method-number">02</span><h3>让方案尽早运行起来</h3><p>拆解 Agent 分工、工具能力与上下文传递。用 AI 编程推进可运行原型，在实际使用中发现流程与体验问题。</p><div class="method-tags">Agent / RAG / Vibe Coding</div></div>
+          <div class="method-step"><span class="method-number">03</span><h3>用可复测的反馈改进</h3><p>分类问题案例，结合自动检查和人工复核验证质量；在相同条件下看响应与成本，决定下一轮改什么。</p><div class="method-tags">Eval / 人工复核 / 迭代决策</div></div>
         </div>
-        <form class="contact-form reveal" id="contactForm">
-          <div class="form-group">
-            <label for="name">姓名 / Name</label>
-            <input type="text" id="name" placeholder="你的姓名" required />
-          </div>
-          <div class="form-group">
-            <label for="email">邮箱 / Email</label>
-            <input type="email" id="email" placeholder="你的邮箱" required />
-          </div>
-          <div class="form-group">
-            <label for="message">留言 / Message</label>
-            <textarea id="message" placeholder="想对我说些什么..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
-            发送消息 ↗
-          </button>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ============ 页脚 ============ -->
-  <footer>
-    <div class="container foot-inner">
-      <span>© 2024 <b>温曜榛</b> · All rights reserved</span>
-      <span>Design & Build with <b class="grad-text">♥</b></span>
-      <span>WYZ — Portfolio <b class="grad-text">V1.0</b></span>
-    </div>
-  </footer>
+    <section class="section experience wrap" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><p class="section-label"><span class="mono">04 /</span> 职业经历</p><div><h2 class="section-title" id="experience-title">理解内容，也理解经营。</h2><p class="intro">内容制作让我重视表达与交付；合伙经营让我更关注需求是否成立、产品能否进入实际工作。</p></div></div>
+      <div class="career-list">
+        <article class="career-row"><p class="career-time">2023.07 — 2026.07</p><div><div class="career-title"><h3>人生海海剧本杀</h3><span>合伙人 · AI 应用与产品</span></div><p>负责 AI 应用落地与线上产品建设，统筹 7—12 人跨职能团队及外部技术协作。围绕门店经营、内容创作和线上互动，推进需求管理、产品验证与迭代。</p></div></article>
+        <article class="career-row"><p class="career-time">2020.06 — 2023.07</p><div><div class="career-title"><h3>二更文化传媒（北京）有限公司</h3><span>新媒体运营</span></div><p>承担账号运营、内容策划与视频制作，协同编导、摄影和后期，将传播需求转化为可交付的内容。</p></div></article>
+        <article class="career-row"><p class="career-time">2020.01 — 2020.06</p><div><div class="career-title"><h3>新华通讯社（北京）</h3><span>摄影摄像实习生</span></div><p>参与新闻发布会、会议及现场报道的影像采集，与记者和编辑协作完成拍摄与素材交接。</p></div></article>
+      </div>
+    </section>
 
+    <section class="contact contact-compact wrap" id="contact" aria-labelledby="contact-title">
+      <div class="contact-caption"><span class="mono">05 / CONTACT</span><h2 id="contact-title">联系信息</h2></div>
+      <div class="contact-directory">
+        <div class="contact-email-row"><a class="directory-email" href="mailto:yzz93139@gmail.com">yzz93139@gmail.com <span aria-hidden="true">↗</span></a><button class="copy-button glass-control" type="button" hidden>复制邮箱 <span aria-hidden="true">＋</span></button></div>
+        <div class="directory-links"><a href="tel:+8618515493319"><span class="directory-label">电话</span>185 1549 3319<span aria-hidden="true">↗</span></a><a href="https://github.com/w93139" target="_blank" rel="noopener noreferrer"><span class="directory-label">GitHub</span>w93139<span aria-hidden="true">↗</span></a></div>
+        <p class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div class="wrap footer-inner"><span>© 2026 温曜榛 · Wen Yaozhen</span><span class="mono">THOUGHTFUL PRODUCTS, GROUNDED IN PRACTICE.</span><a class="back-top" href="#home">回到顶部 <span aria-hidden="true">↑</span></a></div></footer>
+  <script src="effects.js" defer></script>
+  <script src="waves.js" defer></script>
+  <script src="prism.js" defer></script>
+  <script src="glass.js" defer></script>
+  <script src="interactions.js" defer></script>
   <script>
-    // ============ 移动端菜单 ============
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('active');
-      navLinks.classList.toggle('open');
-    });
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('open');
+    (() => {
+      const menu = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('#primary-nav');
+      const setMenu = (open) => {
+        menu.setAttribute('aria-expanded', String(open));
+        menu.querySelector('span').textContent = open ? '−' : '＋';
+        nav.classList.toggle('is-open', open);
+      };
+      menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+      nav.addEventListener('click', (event) => {
+        if (event.target.closest('a')) setMenu(false);
       });
-    });
-
-    // ============ 数字滚动 ============
-    const counters = document.querySelectorAll('[data-count]');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.count);
-          let current = 0;
-          const duration = 1400;
-          const step = Math.max(1, Math.floor(target / 50));
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            el.textContent = current;
-          }, duration / 50);
-          counterObserver.unobserve(el);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+          setMenu(false);
+          menu.focus();
         }
       });
-    }, { threshold: 0.5 });
-    counters.forEach(c => counterObserver.observe(c));
+      const mobile = window.matchMedia('(max-width: 760px)');
+      mobile.addEventListener('change', () => setMenu(false));
+      document.documentElement.classList.add('js');
 
-    // ============ 技能条动画 ============
-    const skillBars = document.querySelectorAll('.skill-bar .fill');
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.width = entry.target.dataset.width + '%';
-          skillObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.4 });
-    skillBars.forEach(b => skillObserver.observe(b));
+      const copyButton = document.querySelector('.copy-button');
+      const status = document.querySelector('.copy-status');
+      if (navigator.clipboard && window.isSecureContext) {
+        copyButton.hidden = false;
+        copyButton.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText('yzz93139@gmail.com');
+            status.textContent = '邮箱已复制。';
+          } catch {
+            status.textContent = '未能自动复制，请选中上方邮箱手动复制。';
+          }
+        });
+      }
 
-    // ============ 滚动揭示 ============
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => revealObserver.observe(el));
-
-    // ============ 表单提交 ============ */
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const name = document.getElementById('name').value;
-      alert('感谢你的留言，' + name + '！我会尽快回复你。');
-      e.target.reset();
-    });
+    })();
   </script>
 </body>
 </html>

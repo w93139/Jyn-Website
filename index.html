@@ -131,15 +131,6 @@
     .method-grid h3 { font-size: 18px; font-weight: 500; margin: 17px 0 10px; }
     .method-grid p { font-size: 13px; color: #aeb3c8; line-height: 1.95; }
     .method-tags { margin-top: 19px; color: #babaff; font: 10px/1.8 var(--mono); }
-    .experience { padding-bottom: 80px; }
-    .career-list { border-top: 1px solid var(--line); }
-    .career-row { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; padding: 26px 0; border-bottom: 1px solid var(--line); }
-    .career-time { font: 11px/1.8 var(--mono); color: var(--muted); padding-top: 5px; }
-    .career-title { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
-    .career-title h3 { font-size: 17px; font-weight: 500; }
-    .career-title span { font-size: 12px; color: var(--muted); text-align: right; }
-    .career-row p { font-size: 13px; color: var(--muted); margin-top: 9px; max-width: 650px; line-height: 1.9; }
-    .career-row:first-child h3 { color: var(--accent); }
     .contact { border-top: 1px solid var(--line); padding: 62px 0 52px; }
     .copy-button { border: 0; background: none; color: var(--muted); padding: 0; cursor: pointer; }
     .copy-button:hover { color: var(--accent); }
@@ -156,8 +147,6 @@
       .hero-copy { font-size: 14px; }
       .feature { gap: 32px; }
       .secondary-projects { gap: 32px; }
-      .career-title { align-items: flex-start; }
-      .career-title span { flex-shrink: 0; }
     }
     @media (max-width: 760px) {
       html { scroll-padding-top: 96px; }
@@ -204,12 +193,6 @@
       .method-number { grid-row: 1 / 4; padding-top: 6px; }
       .method-grid h3 { margin: 0 0 9px; font-size: 17px; }
       .method-tags { margin-top: 11px; }
-      .career-row { grid-template-columns: 1fr; gap: 9px; padding: 23px 0; }
-      .career-title { gap: 12px; }
-      .career-title h3 { font-size: 15px; }
-      .career-title span { font-size: 11px; }
-      .career-time { font-size: 10px; }
-      .career-row p { margin-top: 8px; font-size: 12px; }
       .contact { padding: 44px 0 36px; }
       .footer { padding-block: 13px; }
       .footer-inner { flex-wrap: wrap; gap: 0 16px; font-size: 9px; }
@@ -221,7 +204,6 @@
       .hero-topline { gap: 10px; }
       .small-visual { padding-inline: 17px; }
       .agent-flow { font-size: 11px; gap: 5px; }
-      .career-title { flex-wrap: wrap; gap: 2px 12px; }
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -392,7 +374,6 @@
         <a href="#projects">项目实践</a>
         <a href="#github">GitHub</a>
         <a href="#approach">工作方法</a>
-        <a href="#experience">职业经历</a>
         <a class="nav-contact glass-control" href="mailto:yzz93139@gmail.com">联系我 <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
@@ -402,8 +383,7 @@
     <li><a href="#projects"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">01</span>Projects</span></a></li>
     <li><a href="#github"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">02</span>GitHub</span></a></li>
     <li><a href="#approach"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">03</span>Approach</span></a></li>
-    <li><a href="#experience"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">04</span>Experience</span></a></li>
-    <li><a href="#contact"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">05</span>Contact</span></a></li>
+    <li><a href="#contact"><span class="line-marker" aria-hidden="true"></span><span class="line-label"><span class="line-index" aria-hidden="true">04</span>Contact</span></a></li>
   </ol></nav>
   <main id="main">
     <section class="hero wrap" id="home" aria-labelledby="hero-title">
@@ -430,7 +410,7 @@
             <canvas id="prism-canvas"></canvas>
           </div>
           <div class="profile-shell">
-            <a class="profile-card" href="#github" aria-label="Jyn · Wen，查看 GitHub 项目">
+            <a class="profile-card" href="https://github.com/w93139" target="_blank" rel="noopener noreferrer" aria-label="Jyn · Wen，访问 GitHub 主页">
               <div class="profile-top" aria-hidden="true"><span>PROFILE / 01</span><span class="profile-dot"></span></div>
               <div class="profile-photo-placeholder" aria-hidden="true"><span class="profile-monogram">Jyn</span></div>
               <div class="profile-nameplate"><span class="profile-signature">JYN · WEN</span><span class="profile-role">AI·PM</span></div>
@@ -548,7 +528,7 @@
     <section class="section wrap github-section" id="github" aria-labelledby="github-title">
       <div class="section-heading">
         <p class="section-label"><span class="mono">02 /</span> GitHub</p>
-        <div><h2 class="section-title" id="github-title">想法往前一步，<br>留下可以查看的实现。</h2><p class="intro">工作项目之外的个人产品与工具实践。<br>从剧本互动到个人工作流，用可查看的实现记录探索与迭代。</p><a class="github-intro-link glass-control" href="https://github.com/w93139" target="_blank" rel="noopener noreferrer">GitHub / w93139 <span aria-hidden="true">↗</span></a></div>
+        <div><h2 class="section-title" id="github-title">想法往前一步，<br>留下可以查看的实现。</h2><p class="intro">工作项目之外的个人产品与工具实践。<br>从剧本互动到个人工作流，用可查看的实现记录探索与迭代。</p><a class="github-intro-link glass-control" href="https://github.com/w93139" target="_blank" rel="noopener noreferrer">GitHub 主页 / w93139 <span aria-hidden="true">↗</span></a></div>
       </div>
       <div class="repo-list">
         <article class="repo-row"><span class="repo-number" aria-hidden="true">01</span><div><h3 class="repo-heading"><a href="https://github.com/w93139/AI-Script-Game" target="_blank" rel="noopener noreferrer">AI-Script-Game<span aria-hidden="true">↗</span></a></h3><p class="repo-summary">基于开源底座迭代的单人 AI 剧本杀，以规则引擎管理游戏阶段与证据权限，让多角色互动遵循明确的边界。</p><div class="repo-tags"><span>Python / TypeScript</span><span>AI 互动产品</span></div></div><div class="repo-stage"><strong>本机单人 Demo</strong><p>聚焦可运行的单人流程，尚未正式上线。基于 Jubensha AI 底座，并参考 AI Jubensha 的角色与玩法设计。</p></div></article>
@@ -575,20 +555,11 @@
       </div>
     </section>
 
-    <section class="section experience wrap" id="experience" aria-labelledby="experience-title">
-      <div class="section-heading"><p class="section-label"><span class="mono">04 /</span> 职业经历</p><div><h2 class="section-title" id="experience-title">理解内容，也推动产品交付。</h2><p class="intro">从新闻影像、新媒体运营到 AI 产品经理，持续把内容制作经验转化为工作流设计、质量标准与产品判断。</p></div></div>
-      <div class="career-list">
-        <article class="career-row"><p class="career-time">2023.07 — 2026.07</p><div><div class="career-title"><h3>北京剧象万千网络科技有限公司</h3><span>AI 产品经理</span></div><p>在约 5 人的产研与内容核心团队中，从 AI 内容制作逐步转向产品管理。负责需求梳理、AI 工作流设计及交付验收，协调研发、AI 算法支持与内容创作者，推进影像创作、营销视频、内部工具、智能客服与 GEO 内容服务落地。</p></div></article>
-        <article class="career-row"><p class="career-time">2020.06 — 2023.07</p><div><div class="career-title"><h3>二更文化传媒（北京）有限公司</h3><span>新媒体运营</span></div><p>承担账号运营、内容策划与视频制作，协同编导、摄影和后期，将传播需求转化为可交付的内容。</p></div></article>
-        <article class="career-row"><p class="career-time">2020.01 — 2020.06</p><div><div class="career-title"><h3>新华通讯社（北京）</h3><span>摄影摄像实习生</span></div><p>参与新闻发布会、会议及现场报道的影像采集，与记者和编辑协作完成拍摄与素材交接。</p></div></article>
-      </div>
-    </section>
-
     <section class="contact contact-compact wrap" id="contact" aria-labelledby="contact-title">
-      <div class="contact-caption"><span class="mono">05 / CONTACT</span><h2 id="contact-title">联系信息</h2></div>
+      <div class="contact-caption"><span class="mono">04 / CONTACT</span><h2 id="contact-title">联系信息</h2></div>
       <div class="contact-directory">
         <div class="contact-email-row"><a class="directory-email" href="mailto:yzz93139@gmail.com">yzz93139@gmail.com <span aria-hidden="true">↗</span></a><button class="copy-button glass-control" type="button" hidden>复制邮箱 <span aria-hidden="true">＋</span></button></div>
-        <div class="directory-links"><a href="tel:+8618515493319"><span class="directory-label">电话</span>185 1549 3319<span aria-hidden="true">↗</span></a><a href="https://github.com/w93139" target="_blank" rel="noopener noreferrer"><span class="directory-label">GitHub</span>w93139<span aria-hidden="true">↗</span></a></div>
+        <div class="directory-links"><a href="tel:+8618515493319"><span class="directory-label">电话</span>185 1549 3319<span aria-hidden="true">↗</span></a><a href="https://github.com/w93139" target="_blank" rel="noopener noreferrer"><span class="directory-label">GitHub 主页</span>w93139<span aria-hidden="true">↗</span></a></div>
         <p class="copy-status" role="status" aria-live="polite"></p>
       </div>
     </section>

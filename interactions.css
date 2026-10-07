@@ -323,3 +323,23 @@ body { isolation: isolate; }
 @media (prefers-reduced-motion: reduce), (hover: none), (pointer: coarse) {
   .mouse-sparkles { display: none; }
 }
+
+/* Resume case studies: readable outcomes and supporting capabilities. */
+.project-outcomes .metric-row { row-gap: 28px; }
+.project-outcomes .metric-value { flex-wrap: wrap; }
+.project-outcomes .metric-scope { margin-top: 7px; }
+.project-outcomes .outcome-note { margin-top: 23px; padding-top: 16px; border-top: 1px solid var(--line); }
+.compact-results { display: grid; gap: 13px; padding: 0 0 24px; }
+.compact-results p { display: flex; flex-direction: column; gap: 3px; }
+.compact-results strong { color: #c5cbea; font-size: 16px; font-weight: 500; }
+.compact-results span { color: var(--muted); font-size: 11px; }
+.capability-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 40px; border-top: 1px solid #34374b; padding-top: 30px; }
+.capability-grid h3 { font-size: 15px; font-weight: 500; color: #d4d9ef; }
+.capability-grid p { color: #aeb3c8; font-size: 12px; line-height: 1.95; margin-top: 12px; }
+.capability-grid span { display: block; font-size: 10px; color: #babaff; margin-top: 15px; }
+.architecture-note { color: #a0abc3; font-size: 11px; }
+@media (max-width: 760px) {
+  .capability-grid { grid-template-columns: 1fr; gap: 26px; }
+  .project-meta { flex-wrap: wrap; gap: 5px 16px; }
+  .career-title { flex-wrap: wrap; gap: 5px 18px; }
+}
